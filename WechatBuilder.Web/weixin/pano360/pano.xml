@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama>
+<view fovmode="0">
+<start pan="0" tilt="0" fov="70"/>
+<min pan="0" tilt="-90" fov="5"/>
+<max pan="360" tilt="90" fov="120"/>
+</view>
+<input tilesize="685" tilescale="1.014598540145985" tile0url="images/qian.jpg" tile1url="images/you.jpg" tile2url="images/behind.jpg" tile3url="images/left.jpg" tile4url="images/top.jpg" tile5url="images/bottom.jpg" />
+<userdata title="中国" description="中国的" author="" datetime="" copyright="中国的的吗？" source="" info="" comment="" />
+<autorotate speed="0.200" nodedelay="0.00" startloaded="1" returntohorizon="0.000" delay="5.00"/>
+<control sensitivity="8" simulatemass="1" lockedmouse="0" lockedkeyboard="0" lockedwheel="0" invertwheel="0" speedwheel="1" dblclickfullscreen="0" invertcontrol="1" />
+<sounds>
+</sounds>
+</panorama>

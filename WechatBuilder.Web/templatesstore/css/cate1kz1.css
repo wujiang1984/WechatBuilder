@@ -1,0 +1,52 @@
+#cate1 .mainmenu li .menutitle { font-size: 24px;
+    padding: 20px 0; color:#ffffff;
+    position: inherit;background-color: rgba(0, 0, 0, 0);}
+#cate1 .mainmenu li .menubtn {
+	box-shadow: none;-moz-box-shadow:none;-webkit-box-shadow:none;
+}
+#cate1 .mainmenu li .menubtn .menumesg {
+    position: inherit;
+}
+#cate1 .mainmenu li .menubtn .menuimg {
+        display:none
+}
+#cate1 .mainmenu li .menubtn {
+    border-radius:0;
+    margin: 0;
+}
+#cate1 .mainmenu {
+    padding: 0;
+}
+#cate1 .mainmenu li {
+    margin-right:0;
+} 
+#cate1 .mainmenu li:nth-child(10n+1) .menubtn{
+        background-color:#fd9e0c;
+}
+#cate1 .mainmenu li:nth-child(10n+2) .menubtn{
+        background-color:#474548;
+}
+#cate1 .mainmenu li:nth-child(10n+3) .menubtn{
+        background-color:#d43316;
+}
+#cate1 .mainmenu li:nth-child(10n+4) .menubtn{
+        background-color:#034e78;
+}
+#cate1 .mainmenu li:nth-child(10n+5) .menubtn{
+        background-color:#436773;
+}
+#cate1 .mainmenu li:nth-child(10n+6) .menubtn{
+        background-color:#2cb9b3;
+}
+#cate1 .mainmenu li:nth-child(10n+7) .menubtn{
+        background-color:#2bba67;
+}
+#cate1 .mainmenu li:nth-child(10n+8) .menubtn{
+        background-color:#037863;
+}
+#cate1 .mainmenu li:nth-child(10n+9) .menubtn{
+        background-color:#844F00;
+}
+#cate1 .mainmenu li:nth-child(10n+10) .menubtn{
+        background-color:#B88E2C;
+} 

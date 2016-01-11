@@ -1,0 +1,15 @@
+.list_div {
+ text-align:right; font-size:14px; padding-top:0px; margin-top:0px; 
+ 
+}
+
+.list_span {
+    padding-right:10px;
+}
+.span_money {
+color:red;
+}
+.a_yuding {
+display:inline; padding:0px; padding-right:10px;
+font-weight:bolder;
+}

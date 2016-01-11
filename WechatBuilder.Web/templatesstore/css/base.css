@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+/*全局样式
+---------------------------------------------*/
+section,article,aside,header,footer,nav,figure{ display:block; }
+body,h1,h2,h3,h4,h5,h6,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,figure{ margin:0; padding:0; }
+body,button,input,select,textarea{ font:12px/1.5 arial; }
+h1,h2,h3,h4,h5,h6,button,input,select,textarea{ font-size:100%; }
+address,cite,dfn,em,var{ font-style:normal; }
+code,kbd,pre,samp{ font-family:courier new,courier,monospace; }
+p,ul,li,dl,dd,dt,form,h1,h2,h3,h4,h5,h6{list-style:none;}
+a{color:#666; text-decoration:none;}a:hover{color:#0089CD; text-decoration:none;}
+fieldset,img{ border:0; }
+table{ border-collapse:collapse; border-spacing:0; }
+input::-moz-focus-inner,button::-moz-focus-inner{ border:0;padding:0;outline:0; }
+*html{ zoom:expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true)}
+(this))}
+.clear{clear:both;font-size:0px;height:0px;overflow:hidden; }
+.line5{clear:both;font-size:0px;height:5px;overflow:hidden;}
+.line10{clear:both;font-size:0px;height:10px;overflow:hidden;}
+.line15{clear:both;font-size:0px;height:15px;overflow:hidden;}
+.line20{clear:both;font-size:0px;height:20px;overflow:hidden;}
+.line30{clear:both;font-size:0px;height:30px;overflow:hidden;}
+/* Clear Fix */ 
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;} 
+.clearfix{display:inline-block;} 
+/* Hide from IE Mac */ 
+.clearfix {display:block;} 
+/* End hide from IE Mac */ 
+/* end of clearfix */ 
+.left{float:left;}
+.right{float:right;}
+.red{color:#F00;}.red:hover{color:#F60;}.red a{color:#F00;}.red a:hover{color:#F60;}
+.gray{color:#666;}.gray:hover{color:#F60;}.gray a{color:#666;}.gray a:hover{color:#F60;}
+.blue{color:#1E7BB3;}.blue:hover{color:#F60;}.blue a{color:#1E7BB3;}.blue a:hover{color:#F60;}
+.font18{font-size:18px;}
+.pad20{padding:20px;}
+.marL10{margin-left:10px;}
