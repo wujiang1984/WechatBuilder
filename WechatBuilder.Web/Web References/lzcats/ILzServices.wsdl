@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LZ_GetBlance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_GetBlanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LZ_GetBlanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_EditPwd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newpwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_EditPwdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LZ_EditPwdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_SendSms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telphone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsdate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_SendSmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LZ_SendSmsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_SendSmsD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telphone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_SendSmsDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LZ_SendSmsDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_GetReports">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_GetReportsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LZ_GetReportsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_GetReceive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_GetReceiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LZ_GetReceiveResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LZ_SetSignLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_SetSignLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LZ_SetSignLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_SetSignLoginCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LZ_SetSignLoginCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LZ_SetSignLoginCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LZ_GetBlanceSoapIn">
+    <wsdl:part name="parameters" element="tns:LZ_GetBlance" />
+  </wsdl:message>
+  <wsdl:message name="LZ_GetBlanceSoapOut">
+    <wsdl:part name="parameters" element="tns:LZ_GetBlanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="LZ_EditPwdSoapIn">
+    <wsdl:part name="parameters" element="tns:LZ_EditPwd" />
+  </wsdl:message>
+  <wsdl:message name="LZ_EditPwdSoapOut">
+    <wsdl:part name="parameters" element="tns:LZ_EditPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="LZ_SendSmsSoapIn">
+    <wsdl:part name="parameters" element="tns:LZ_SendSms" />
+  </wsdl:message>
+  <wsdl:message name="LZ_SendSmsSoapOut">
+    <wsdl:part name="parameters" element="tns:LZ_SendSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LZ_SendSmsDSoapIn">
+    <wsdl:part name="parameters" element="tns:LZ_SendSmsD" />
+  </wsdl:message>
+  <wsdl:message name="LZ_SendSmsDSoapOut">
+    <wsdl:part name="parameters" element="tns:LZ_SendSmsDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LZ_GetReportsSoapIn">
+    <wsdl:part name="parameters" element="tns:LZ_GetReports" />
+  </wsdl:message>
+  <wsdl:message name="LZ_GetReportsSoapOut">
+    <wsdl:part name="parameters" element="tns:LZ_GetReportsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LZ_GetReceiveSoapIn">
+    <wsdl:part name="parameters" element="tns:LZ_GetReceive" />
+  </wsdl:message>
+  <wsdl:message name="LZ_GetReceiveSoapOut">
+    <wsdl:part name="parameters" element="tns:LZ_GetReceiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="LZ_SetSignLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:LZ_SetSignLogin" />
+  </wsdl:message>
+  <wsdl:message name="LZ_SetSignLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LZ_SetSignLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LZ_SetSignLoginCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:LZ_SetSignLoginCancel" />
+  </wsdl:message>
+  <wsdl:message name="LZ_SetSignLoginCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:LZ_SetSignLoginCancelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILzServicesSoap">
+    <wsdl:operation name="LZ_GetBlance">
+      <wsdl:input message="tns:LZ_GetBlanceSoapIn" />
+      <wsdl:output message="tns:LZ_GetBlanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LZ_EditPwd">
+      <wsdl:input message="tns:LZ_EditPwdSoapIn" />
+      <wsdl:output message="tns:LZ_EditPwdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SendSms">
+      <wsdl:input message="tns:LZ_SendSmsSoapIn" />
+      <wsdl:output message="tns:LZ_SendSmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SendSmsD">
+      <wsdl:input message="tns:LZ_SendSmsDSoapIn" />
+      <wsdl:output message="tns:LZ_SendSmsDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LZ_GetReports">
+      <wsdl:input message="tns:LZ_GetReportsSoapIn" />
+      <wsdl:output message="tns:LZ_GetReportsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LZ_GetReceive">
+      <wsdl:input message="tns:LZ_GetReceiveSoapIn" />
+      <wsdl:output message="tns:LZ_GetReceiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SetSignLogin">
+      <wsdl:input message="tns:LZ_SetSignLoginSoapIn" />
+      <wsdl:output message="tns:LZ_SetSignLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SetSignLoginCancel">
+      <wsdl:input message="tns:LZ_SetSignLoginCancelSoapIn" />
+      <wsdl:output message="tns:LZ_SetSignLoginCancelSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ILzServicesSoap" type="tns:ILzServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LZ_GetBlance">
+      <soap:operation soapAction="http://tempuri.org/LZ_GetBlance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_EditPwd">
+      <soap:operation soapAction="http://tempuri.org/LZ_EditPwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SendSms">
+      <soap:operation soapAction="http://tempuri.org/LZ_SendSms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SendSmsD">
+      <soap:operation soapAction="http://tempuri.org/LZ_SendSmsD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_GetReports">
+      <soap:operation soapAction="http://tempuri.org/LZ_GetReports" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_GetReceive">
+      <soap:operation soapAction="http://tempuri.org/LZ_GetReceive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SetSignLogin">
+      <soap:operation soapAction="http://tempuri.org/LZ_SetSignLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SetSignLoginCancel">
+      <soap:operation soapAction="http://tempuri.org/LZ_SetSignLoginCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ILzServicesSoap12" type="tns:ILzServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LZ_GetBlance">
+      <soap12:operation soapAction="http://tempuri.org/LZ_GetBlance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_EditPwd">
+      <soap12:operation soapAction="http://tempuri.org/LZ_EditPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SendSms">
+      <soap12:operation soapAction="http://tempuri.org/LZ_SendSms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SendSmsD">
+      <soap12:operation soapAction="http://tempuri.org/LZ_SendSmsD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_GetReports">
+      <soap12:operation soapAction="http://tempuri.org/LZ_GetReports" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_GetReceive">
+      <soap12:operation soapAction="http://tempuri.org/LZ_GetReceive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SetSignLogin">
+      <soap12:operation soapAction="http://tempuri.org/LZ_SetSignLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LZ_SetSignLoginCancel">
+      <soap12:operation soapAction="http://tempuri.org/LZ_SetSignLoginCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ILzServices">
+    <wsdl:port name="ILzServicesSoap" binding="tns:ILzServicesSoap">
+      <soap:address location="http://sms.fgezi.com/Modules/Interface/ILzServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ILzServicesSoap12" binding="tns:ILzServicesSoap12">
+      <soap12:address location="http://sms.fgezi.com/Modules/Interface/ILzServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

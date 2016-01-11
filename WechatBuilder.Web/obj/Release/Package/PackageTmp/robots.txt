@@ -1,0 +1,16 @@
+﻿User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /App_Data/
+Disallow: /aspx/
+Disallow: /css/
+Disallow: /editor/
+Disallow: /html/
+Disallow: /images/
+Disallow: /shopmgr/
+Disallow: /templates/
+Disallow: /templates_portal/
+Disallow: /tools/
+Disallow: /upload/
+Disallow: /weixin/
+Disallow: /xmlconfig/

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E824FFCC-705E-4CF6-8710-142395937FCB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WechatBuilder.API</RootNamespace>
+    <AssemblyName>WechatBuilder.API</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJSON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OAuth\feixin_helper.cs" />
+    <Compile Include="OAuth\kaixin_helper.cs" />
+    <Compile Include="OAuth\oauth_config.cs" />
+    <Compile Include="OAuth\oauth_helper.cs" />
+    <Compile Include="OAuth\qq_helper.cs" />
+    <Compile Include="OAuth\renren_helper.cs" />
+    <Compile Include="OAuth\sina_helper.cs" />
+    <Compile Include="OAuth\taobao_helper.cs" />
+    <Compile Include="Payment\Alipay\AlipayConfig.cs" />
+    <Compile Include="Payment\Alipay\AlipayCore.cs" />
+    <Compile Include="Payment\Alipay\AlipayNotify.cs" />
+    <Compile Include="Payment\Alipay\AlipayService.cs" />
+    <Compile Include="Payment\Alipay\AlipaySubmit.cs" />
+    <Compile Include="Payment\Tenpay\ClientResponseHandler.cs" />
+    <Compile Include="Payment\Tenpay\MD5Util.cs" />
+    <Compile Include="Payment\Tenpay\RequestHandler.cs" />
+    <Compile Include="Payment\Tenpay\ResponseHandler.cs" />
+    <Compile Include="Payment\Tenpay\TenpayHttpClient.cs" />
+    <Compile Include="Payment\Tenpay\TenpayUtil.cs" />
+    <Compile Include="Payment\wxpay\CommonUtil.cs" />
+    <Compile Include="Payment\wxpay\comm\MD5Util.cs" />
+    <Compile Include="Payment\wxpay\comm\SHA1Util.cs" />
+    <Compile Include="Payment\wxpay\comm\TenpayUtil.cs" />
+    <Compile Include="Payment\wxpay\Example.cs" />
+    <Compile Include="Payment\wxpay\FaHuoProc.cs" />
+    <Compile Include="Payment\wxpay\MD5SignUtil.cs" />
+    <Compile Include="Payment\wxpay\RequestHandler.cs" />
+    <Compile Include="Payment\wxpay\ResponseHandler.cs" />
+    <Compile Include="Payment\wxpay\SDKRuntimeException.cs" />
+    <Compile Include="Payment\wxpay\tuikuan\CheckRequestHandler.cs" />
+    <Compile Include="Payment\wxpay\tuikuan\ClientResponseHandler.cs" />
+    <Compile Include="Payment\wxpay\tuikuan\RequestHandler.cs" />
+    <Compile Include="Payment\wxpay\tuikuan\ResponseHandler.cs" />
+    <Compile Include="Payment\wxpay\tuikuan\TenpayHttpClient.cs" />
+    <Compile Include="Payment\wxpay\WxPayHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WechatBuilder.BLL\WechatBuilder.BLL.csproj">
+      <Project>{EC27BBA4-030C-4853-9FB2-A075654B28FA}</Project>
+      <Name>WechatBuilder.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WechatBuilder.Common\WechatBuilder.Common.csproj">
+      <Project>{20908989-7773-493B-B1BD-764BE322A935}</Project>
+      <Name>WechatBuilder.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WechatBuilder.Model\WechatBuilder.Model.csproj">
+      <Project>{59E451EA-4E7A-408A-9F5C-36F2AC8D90AD}</Project>
+      <Name>WechatBuilder.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WechatBuilder.WeiXinComm\WechatBuilder.WeiXinComm.csproj">
+      <Project>{20b8fb5a-4362-48f8-bd3a-245fdaf9bcac}</Project>
+      <Name>WechatBuilder.WeiXinComm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Payment\wxpay\readme.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+C:\Users\toy\Desktop\世界杯竞猜代码\MxWeiXinPF.Common\bin\Release\MxWeiXinPF.Common.dll
+C:\Users\toy\Desktop\世界杯竞猜代码\MxWeiXinPF.Common\bin\Release\MxWeiXinPF.Common.pdb
+C:\Users\toy\Desktop\世界杯竞猜代码\MxWeiXinPF.Common\obj\Release\MxWeiXinPF.Common.dll
+C:\Users\toy\Desktop\世界杯竞猜代码\MxWeiXinPF.Common\obj\Release\MxWeiXinPF.Common.pdb
+C:\Users\toy\Desktop\微信源码\MxWeiXinPF.Common\bin\Release\MxWeiXinPF.Common.dll
+C:\Users\toy\Desktop\微信源码\MxWeiXinPF.Common\bin\Release\MxWeiXinPF.Common.pdb
+C:\Users\toy\Desktop\微信源码\MxWeiXinPF.Common\obj\Release\MxWeiXinPF.Common.dll
+C:\Users\toy\Desktop\微信源码\MxWeiXinPF.Common\obj\Release\MxWeiXinPF.Common.pdb
+C:\Users\PIFEI\Desktop\img\微信公众平台整站源码20150727\微信公众平台源码版\MxWeiXinPF.Common\bin\Release\MxWeiXinPF.Common.dll
+C:\Users\PIFEI\Desktop\img\微信公众平台整站源码20150727\微信公众平台源码版\MxWeiXinPF.Common\bin\Release\MxWeiXinPF.Common.pdb
+C:\Users\PIFEI\Desktop\img\微信公众平台整站源码20150727\微信公众平台源码版\MxWeiXinPF.Common\obj\Release\MxWeiXinPF.Common.dll
+C:\Users\PIFEI\Desktop\img\微信公众平台整站源码20150727\微信公众平台源码版\MxWeiXinPF.Common\obj\Release\MxWeiXinPF.Common.pdb

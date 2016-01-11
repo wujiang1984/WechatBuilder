@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <ToUserName><![CDATA[哒哒哒]]></ToUserName>
+  <FromUserName><![CDATA[gh_161b0f5a4e27]]></FromUserName>
+  <CreateTime>1395820117</CreateTime>
+  <MsgType>news</MsgType>
+  <ArticleCount>1</ArticleCount>
+  <Articles>
+    <item>
+      <Title><![CDATA[测试商家2]]></Title>
+      <Description><![CDATA[商家简介
+111]]></Description>
+      <PicUrl><![CDATA[http://localhost:820/weixin/ucard/images/ucard_cover.jpg]]></PicUrl>
+      <Url><![CDATA[http://localhost:820/weixin/ucard/index.aspx?wid=5&id=2&token=1395820117&openid=哒哒哒&wxref=mp.weixin.qq.com]]></Url>
+    </item>
+  </Articles>
+  <FuncFlag>0</FuncFlag>
+</xml>

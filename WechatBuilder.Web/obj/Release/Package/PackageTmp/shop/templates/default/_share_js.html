@@ -1,0 +1,26 @@
+﻿<script type="text/javascript">
+    var shareData = { "send2Friend": { "content": "{$shopconfig.shopName}", "img": "{$yuming}/{$shopconfig.logo}", "link": "{$indexurl}", "title": "{$shopconfig.shopName}" }, "share2Friend": { "img": "{$yuming}/{$shopconfig.logo}", "link": "{$indexurl}", "title": "【{$shopconfig.shopName}】关注我吧！更多会员特权等着你！" }, "share2qqBlog": { "content": "{$shopconfig.shopName}", "link": "{$indexurl}" } };
+    !function () {
+        function c() {
+            var a = WeixinJSBridge; a.on("menu:share:appmessage", e), a.on("menu:share:weibo", f), a.on("menu:share:timeline", g), a.invoke("getNetworkType", {}, d)
+        }
+        function d(a) {
+            var b, c;
+            switch (a.err_msg) { case "network_type:wwan": b = 2e3; break; case "network_type:edge": b = 3e3; break; case "network_type:wifi": b = 4e3 } c = new Image, c.onerror = c.onload = function () { c = null }
+        }
+        function e() {
+            var a = window.shareData.send2Friend, b = h(a); a.content = b ? b.content : a.content, a.img = b && b.img ? b.img : a.img, WeixinJSBridge.invoke("sendAppMessage", { img_url: a.img, img_width: "640", img_height: "640", link: a.link, desc: a.content, title: a.title }, function () { })
+        } function f() {
+            var b = window.shareData.share2qqBlog; WeixinJSBridge.invoke("shareWeibo", { content: a.isios ? b.content + b.link : b.content, url: b.link }, function () { })
+        }
+        function g() {
+            var a = window.shareData.share2Friend; WeixinJSBridge.invoke("shareTimeline", { img_url: a.img, img_width: "640", img_height: "640", link: a.link, desc: " ", title: a.title }, function () { })
+        } function h() {
+            return "function" == typeof b ? b() : ""
+        }
+        var b, a = function () {
+            var a = window.navigator.userAgent; return this.isAndroid = a.match(/(Android)\s+([\d.]+)/) || a.match(/Silk-Accelerated/) ? !0 : !1, this.isiPad = a.match(/iPad/) ? !0 : !1, this.isiPod = a.match(/(iPod).*OS\s([\d_]+)/) ? !0 : !1, this.isiPhone = !this.isiPad && a.match(/(iPhone\sOS)\s([\d_]+)/) ? !0 : !1, this.isios = this.isiPhone || this.isiPad || this.isiPod, this
+        }();
+        window.shareData && document.addEventListener("WeixinJSBridgeReady", c, !1), window.setShareListener = function (a) { b = a }
+    }();
+    </script>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <ToUserName><![CDATA[dddd25]]></ToUserName>
+  <FromUserName><![CDATA[gh_161b0f5a4e27]]></FromUserName>
+  <CreateTime>1394377266</CreateTime>
+  <MsgType>news</MsgType>
+  <ArticleCount>1</ArticleCount>
+  <Articles>
+    <item>
+      <Title><![CDATA[测试图朴]]></Title>
+      <Description><![CDATA[打发掉]]></Description>
+      <PicUrl><![CDATA[/upload/201403/09/201403092253268964.jpg]]></PicUrl>
+      <Url><![CDATA[http://www.baidu.com?token=1394377267&openid=dddd25&wxref=mp.weixin.qq.com]]></Url>
+    </item>
+  </Articles>
+  <FuncFlag>0</FuncFlag>
+</xml>

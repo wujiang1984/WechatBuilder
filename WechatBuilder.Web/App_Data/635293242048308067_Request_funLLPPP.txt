@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+<ToUserName><![CDATA[gh_161b0f5a4e27]]></ToUserName>
+<FromUserName><![CDATA[funLLPPP]]></FromUserName>
+<CreateTime>1393698565</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[优惠券2]]></Content>
+<MsgId>1234567890123456</MsgId>
+</xml>

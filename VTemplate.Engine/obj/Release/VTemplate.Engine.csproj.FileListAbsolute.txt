@@ -1,0 +1,14 @@
+C:\Users\toy\Desktop\世界杯竞猜代码\VTemplate.Engine\bin\Release\VTemplate.Engine.xml
+C:\Users\toy\Desktop\世界杯竞猜代码\VTemplate.Engine\bin\Release\VTemplate.Engine.dll
+C:\Users\toy\Desktop\世界杯竞猜代码\VTemplate.Engine\bin\Release\VTemplate.Engine.pdb
+C:\Users\toy\Desktop\世界杯竞猜代码\VTemplate.Engine\obj\Release\VTemplate.Engine.dll
+C:\Users\toy\Desktop\世界杯竞猜代码\VTemplate.Engine\obj\Release\VTemplate.Engine.pdb
+C:\Users\toy\Desktop\微信源码\VTemplate.Engine\bin\Release\VTemplate.Engine.dll
+C:\Users\toy\Desktop\微信源码\VTemplate.Engine\bin\Release\VTemplate.Engine.pdb
+C:\Users\toy\Desktop\微信源码\VTemplate.Engine\obj\Release\VTemplate.Engine.dll
+C:\Users\toy\Desktop\微信源码\VTemplate.Engine\obj\Release\VTemplate.Engine.pdb
+C:\Users\PIFEI\Desktop\img\微信公众平台整站源码20150727\微信公众平台源码版\VTemplate.Engine\bin\Release\VTemplate.Engine.xml
+C:\Users\PIFEI\Desktop\img\微信公众平台整站源码20150727\微信公众平台源码版\VTemplate.Engine\bin\Release\VTemplate.Engine.dll
+C:\Users\PIFEI\Desktop\img\微信公众平台整站源码20150727\微信公众平台源码版\VTemplate.Engine\bin\Release\VTemplate.Engine.pdb
+C:\Users\PIFEI\Desktop\img\微信公众平台整站源码20150727\微信公众平台源码版\VTemplate.Engine\obj\Release\VTemplate.Engine.dll
+C:\Users\PIFEI\Desktop\img\微信公众平台整站源码20150727\微信公众平台源码版\VTemplate.Engine\obj\Release\VTemplate.Engine.pdb

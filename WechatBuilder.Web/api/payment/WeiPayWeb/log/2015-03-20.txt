@@ -1,0 +1,431 @@
+﻿2015-3-20 10:04:33      ============ 开始 获取微信用户相关信息 =====================
+
+2015-3-20 10:04:33     Send 页面  returnStr 第一个：{"access_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCJmOSJWtwwjDQHhicBB_BQJ-NMxHeu0WDIVEyTrAF7Z7qKxJaXYt5HIDFKZX3RQ0MGsVRxq25mepyyKrwOPVHYQ","expires_in":7200,"refresh_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoC2scN-WY6S96qKN5DdEap6FHatnZ7bWeTSl_9Hn_m3ftkSFgQpRu17kTpuNu2W8xuf74ChkmqNjo5gXkYV8l_Iw","openid":"o7OleuJLfftQZFTJNaoaVCOPHMWo","scope":"snsapi_base"}
+
+2015-3-20 10:04:33     Send 页面  access_token：OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCJmOSJWtwwjDQHhicBB_BQJ-NMxHeu0WDIVEyTrAF7Z7qKxJaXYt5HIDFKZX3RQ0MGsVRxq25mepyyKrwOPVHYQ
+
+2015-3-20 10:04:33     Send 页面  openid=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:04:33     Send 页面  returnStr：{"errcode":48001,"errmsg":"api unauthorized"}
+
+2015-3-20 10:04:33      ============ 结束 获取微信用户相关信息 =====================
+
+2015-3-20 10:04:36     ============ 单次支付开始 ===============
+
+2015-3-20 10:04:36     传递支付参数：OrderSN=20150320100433、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:04:36     WeiPay 页面  sign：18A02020A65F1DFF29AE1AF3F3C92D98
+
+2015-3-20 10:04:36     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[18A02020A65F1DFF29AE1AF3F3C92D98]]></sign><spbill_create_ip><![CDATA[183.61.34.39]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320100433]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[c399862d3b9d6b76c8436e924a68c45b]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:04:36     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[XeTDHCyslryTsvKm]]></nonce_str>
+<sign><![CDATA[9C704121A42C0936E0D279D225C02023]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320095450c5d01ccd2c0757676089]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:04:36     WeiPay 页面  package：prepay_id=wx20150320095450c5d01ccd2c0757676089
+
+2015-3-20 10:04:36     WeiPay 页面  paySign：692C3ECD4E73E88F56F253249EC7F245
+
+2015-3-20 10:04:50     ============ 单次支付开始 ===============
+
+2015-3-20 10:04:50     传递支付参数：OrderSN=20150320100433、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:04:50     WeiPay 页面  sign：6E126865220D6753108858176A95ED83
+
+2015-3-20 10:04:50     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[6E126865220D6753108858176A95ED83]]></sign><spbill_create_ip><![CDATA[101.226.33.208]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320100433]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[812b4ba287f5ee0bc9d43bbf5bbe87fb]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:04:51     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[WKmV6PxjYpLvynmD]]></nonce_str>
+<sign><![CDATA[7BF9DAD630FC2FDBA7F97D066C4E95F6]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201503200955044206061c6f0127046917]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:04:51     WeiPay 页面  package：prepay_id=wx201503200955044206061c6f0127046917
+
+2015-3-20 10:04:51     WeiPay 页面  paySign：7118364544FD82498CC2A1EECA4489D7
+
+2015-3-20 10:06:54     Notify 页面  返回数据：appid=wx44bb81a7538718c0&attach=test&bank_type=CCB_DEBIT&cash_fee=1&fee_type=CNY&is_subscribe=Y&mch_id=10018007&nonce_str=75fc093c0ee742f6dddaa13fff98f104&openid=o7OleuAgx-8QuT8kwoP0ccAYpLpI&out_trade_no=20150320093140&result_code=SUCCESS&return_code=SUCCESS&time_end=20150320092302&total_fee=1&trade_type=JSAPI&transaction_id=1006300215201503200034399181&key=xtyd35xtyd35xtyd35xtyd35xtyd3588、sign： 52FF4B12CD479E76501B71097C231141
+
+2015-3-20 10:06:54     Notify 页面  支付成功，支付信息：商家订单号：20150320093140、支付金额(分)：1、自定义参数：test
+
+2015-3-20 10:06:54     ============ 单次支付结束 ===============
+
+2015-3-20 10:08:38     Notify 页面  返回数据：appid=wx44bb81a7538718c0&attach=test&bank_type=GDB_CREDIT&cash_fee=1&fee_type=CNY&is_subscribe=Y&mch_id=10018007&nonce_str=da0d1111d2dc5d489242e60ebcbaf988&openid=o7OleuMh3PttrBVnbHbyQjkzVLV4&out_trade_no=20150320093420&result_code=SUCCESS&return_code=SUCCESS&time_end=20150320092444&total_fee=1&trade_type=JSAPI&transaction_id=1001210215201503200034399194&key=xtyd35xtyd35xtyd35xtyd35xtyd3588、sign： 535CB6BD26221DE1C6EE1A87809A0856
+
+2015-3-20 10:08:38     Notify 页面  支付成功，支付信息：商家订单号：20150320093420、支付金额(分)：1、自定义参数：test
+
+2015-3-20 10:08:38     ============ 单次支付结束 ===============
+
+2015-3-20 10:10:44      ============ 开始 获取微信用户相关信息 =====================
+
+2015-3-20 10:10:45     Send 页面  returnStr 第一个：{"access_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCbd9QjMleecobEAobZIPt1GddnGeIP3bu9NfiJQVsa_ijPews4lUF7ustManro5tGlJ9jy2HiqMoJd60-iMkmRw","expires_in":7200,"refresh_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCBrRV6oKIZ0MgSgC1OZUFIkn2hf5gzf2YERA7UKr_XZqXQSDIcuBs7iCztf76bOU45z3L5GIEDfYYxEgUpnXEsg","openid":"o7OleuJLfftQZFTJNaoaVCOPHMWo","scope":"snsapi_base"}
+
+2015-3-20 10:10:45     Send 页面  access_token：OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCbd9QjMleecobEAobZIPt1GddnGeIP3bu9NfiJQVsa_ijPews4lUF7ustManro5tGlJ9jy2HiqMoJd60-iMkmRw
+
+2015-3-20 10:10:45     Send 页面  openid=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:10:45     Send 页面  returnStr：{"errcode":48001,"errmsg":"api unauthorized"}
+
+2015-3-20 10:10:45      ============ 结束 获取微信用户相关信息 =====================
+
+2015-3-20 10:10:52     ============ 单次支付开始 ===============
+
+2015-3-20 10:10:52     传递支付参数：OrderSN=20150320101044、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:10:52     WeiPay 页面  sign：FA3279161BF06F6551A44FE96640F82E
+
+2015-3-20 10:10:52     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[FA3279161BF06F6551A44FE96640F82E]]></sign><spbill_create_ip><![CDATA[163.177.69.13]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320101044]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[8f468c873a32bb0619eaeb2050ba45d1]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:10:52     ============ 单次支付开始 ===============
+
+2015-3-20 10:10:52     传递支付参数：OrderSN=20150320101044、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:10:52     WeiPay 页面  sign：5DCB3E0F4728FEB10C1154200DA4C53B
+
+2015-3-20 10:10:52     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[5DCB3E0F4728FEB10C1154200DA4C53B]]></sign><spbill_create_ip><![CDATA[101.226.66.178]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320101044]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[c058f544c737782deacefa532d9add4c]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:10:53     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[NG2EvCyx6Iqb4rjK]]></nonce_str>
+<sign><![CDATA[D56DF77CA9947F7838C20238C6365F68]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320100107190e351a2b0088770629]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:10:53     WeiPay 页面  package：prepay_id=wx20150320100107190e351a2b0088770629
+
+2015-3-20 10:10:53     WeiPay 页面  paySign：4E5D8FA064C1569E97C526ECF67795FD
+
+2015-3-20 10:10:53     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[G1L5SIHiRxKlDNwU]]></nonce_str>
+<sign><![CDATA[5959E36EC80CDFE3F2B75292F17E6E2D]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320100107190e351a2b0110483207]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:10:53     WeiPay 页面  package：prepay_id=wx20150320100107190e351a2b0110483207
+
+2015-3-20 10:10:53     WeiPay 页面  paySign：91BFDB17C9AC0C3751B3C34B2F930E5E
+
+2015-3-20 10:12:04     Notify 页面  返回数据：appid=wx44bb81a7538718c0&attach=test&bank_type=CFT&cash_fee=1&fee_type=CNY&is_subscribe=Y&mch_id=10018007&nonce_str=92262bf907af914b95a0fc33c3f33bf6&openid=o7OleuMh3PttrBVnbHbyQjkzVLV4&out_trade_no=20150320093752&result_code=SUCCESS&return_code=SUCCESS&time_end=20150320092814&total_fee=1&trade_type=JSAPI&transaction_id=1001210215201503200034429886&key=xtyd35xtyd35xtyd35xtyd35xtyd3588、sign： C3C9E538CEFAF63D518F064E333A9BFD
+
+2015-3-20 10:12:04     Notify 页面  支付成功，支付信息：商家订单号：20150320093752、支付金额(分)：1、自定义参数：test
+
+2015-3-20 10:12:04     ============ 单次支付结束 ===============
+
+2015-3-20 10:12:36     Notify 页面  返回数据：appid=wx44bb81a7538718c0&attach=test&bank_type=CFT&cash_fee=1&fee_type=CNY&is_subscribe=Y&mch_id=10018007&nonce_str=97e8527feaf77a97fc38f34216141515&openid=o7OleuJLfftQZFTJNaoaVCOPHMWo&out_trade_no=20150320093837&result_code=SUCCESS&return_code=SUCCESS&time_end=20150320092843&total_fee=1&trade_type=JSAPI&transaction_id=1000110215201503200034427328&key=xtyd35xtyd35xtyd35xtyd35xtyd3588、sign： A1EABE29AA2B7A2E2A3EDD51BA66B7E7
+
+2015-3-20 10:12:36     Notify 页面  支付成功，支付信息：商家订单号：20150320093837、支付金额(分)：1、自定义参数：test
+
+2015-3-20 10:12:36     ============ 单次支付结束 ===============
+
+2015-3-20 10:27:54      ============ 开始 获取微信用户相关信息 =====================
+
+2015-3-20 10:27:54     Send 页面  returnStr 第一个：{"access_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCoKFfbJMkr4rQkkfPuAk9HiFxq4TRVkU6STSlp1no-zpUKxShDjvJhG5ZaIFHW7BNVjMlEHQWxeLPowBnMU_Xvw","expires_in":7200,"refresh_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCfgIVnSMRohoNV6pkuewpqbJXGfqx4f6v2XGu2m84H9divdgcUQu8hDfw1JNLWHkrdrFZCTpZbt5loyvaOhVKTA","openid":"o7OleuJLfftQZFTJNaoaVCOPHMWo","scope":"snsapi_base"}
+
+2015-3-20 10:27:54     Send 页面  access_token：OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCoKFfbJMkr4rQkkfPuAk9HiFxq4TRVkU6STSlp1no-zpUKxShDjvJhG5ZaIFHW7BNVjMlEHQWxeLPowBnMU_Xvw
+
+2015-3-20 10:27:54     Send 页面  openid=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:27:54     Send 页面  returnStr：{"errcode":48001,"errmsg":"api unauthorized"}
+
+2015-3-20 10:27:54      ============ 结束 获取微信用户相关信息 =====================
+
+2015-3-20 10:27:56     ============ 单次支付开始 ===============
+
+2015-3-20 10:27:56     传递支付参数：OrderSN=20150320102754、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:27:56     WeiPay 页面  sign：74DA7D2C62DD8ADD997F38323E4A69A6
+
+2015-3-20 10:27:56     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[74DA7D2C62DD8ADD997F38323E4A69A6]]></sign><spbill_create_ip><![CDATA[163.177.69.13]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320102754]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[9908279ebbf1f9b250ba689db6a0222b]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:27:57     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[YZTL2kfsFMrKRKoO]]></nonce_str>
+<sign><![CDATA[43DC488452E3339641443043A11DDFB4]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320101811cc2823aea50601667775]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:27:57     WeiPay 页面  package：prepay_id=wx20150320101811cc2823aea50601667775
+
+2015-3-20 10:27:57     WeiPay 页面  paySign：F7293DC438A42CD5CE92943545135EB3
+
+2015-3-20 10:28:28      ============ 开始 获取微信用户相关信息 =====================
+
+2015-3-20 10:28:28     Send 页面  returnStr 第一个：{"access_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCIcpTjuobzs4JmR5GJWIoLcxPwIGSH6EMHW3QFghTiAaL6YNulwRXmmtCa_0RzHksuDbCw4Dlj3k1YE3M1AfKPA","expires_in":7200,"refresh_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCpBhQGvvRUPSbBQGycN8Z6x5gtemKSkc1Sw8FcdVPF2dgdRFR3BL1AxMUtqsP5xcRuY3njr_CjawtvikhTQi95g","openid":"o7OleuJLfftQZFTJNaoaVCOPHMWo","scope":"snsapi_base"}
+
+2015-3-20 10:28:28     Send 页面  access_token：OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCIcpTjuobzs4JmR5GJWIoLcxPwIGSH6EMHW3QFghTiAaL6YNulwRXmmtCa_0RzHksuDbCw4Dlj3k1YE3M1AfKPA
+
+2015-3-20 10:28:28     Send 页面  openid=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:28:28     Send 页面  returnStr：{"errcode":48001,"errmsg":"api unauthorized"}
+
+2015-3-20 10:28:28      ============ 结束 获取微信用户相关信息 =====================
+
+2015-3-20 10:28:30     ============ 单次支付开始 ===============
+
+2015-3-20 10:28:30     传递支付参数：OrderSN=20150320102828、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:28:30     WeiPay 页面  sign：BC18BA5D89E4A81E84CF21C88A24245C
+
+2015-3-20 10:28:30     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[BC18BA5D89E4A81E84CF21C88A24245C]]></sign><spbill_create_ip><![CDATA[183.61.34.39]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320102828]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[a1140a3d0df1c81e24ae954d935e8926]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:28:30     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[NmhgZyP6CuCM1MHz]]></nonce_str>
+<sign><![CDATA[944A33E1BD036B978F477C58AC37D0A2]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201503201018444b1931daa60740990017]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:28:30     WeiPay 页面  package：prepay_id=wx201503201018444b1931daa60740990017
+
+2015-3-20 10:28:30     WeiPay 页面  paySign：62C86FDAD4D8D62A9B40A14252A8E49E
+
+2015-3-20 10:30:09     ============ 单次支付开始 ===============
+
+2015-3-20 10:30:09     传递支付参数：OrderSN=20150320102754、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:30:09     WeiPay 页面  sign：C954135376FD26063810144FBAD5FB10
+
+2015-3-20 10:30:09     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[C954135376FD26063810144FBAD5FB10]]></sign><spbill_create_ip><![CDATA[101.226.66.179]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320102754]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[96ea64f3a1aa2fd00c72faacf0cb8ac9]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:30:09     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[qcG0CgWQSsFnfGsn]]></nonce_str>
+<sign><![CDATA[6190CCB12F35E7333B5960D03586BBCD]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320102023954f62b6870806936594]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:30:09     WeiPay 页面  package：prepay_id=wx20150320102023954f62b6870806936594
+
+2015-3-20 10:30:09     WeiPay 页面  paySign：F2E637ABB430A88B0C2211E5E3E79EA1
+
+2015-3-20 10:30:41      ============ 开始 获取微信用户相关信息 =====================
+
+2015-3-20 10:30:41     Send 页面  returnStr 第一个：{"access_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCx6R1EBmvelW0TTh2AgMErpZ_d7De_eIEqzmDmy3SkU6P9eNwfxwCbPG15oO4GQO3M9zsapd2lLYW7ZzBOeradw","expires_in":7200,"refresh_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCfcErusM8G9M2njbtJrbloGYhM3K0M2JsvvP8-VuxUYKFF4hHHmNwCHZafg1tQdA8ZuBH25bgv4SGZUBfeoo4SQ","openid":"o7OleuJLfftQZFTJNaoaVCOPHMWo","scope":"snsapi_base"}
+
+2015-3-20 10:30:41     Send 页面  access_token：OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCx6R1EBmvelW0TTh2AgMErpZ_d7De_eIEqzmDmy3SkU6P9eNwfxwCbPG15oO4GQO3M9zsapd2lLYW7ZzBOeradw
+
+2015-3-20 10:30:41     Send 页面  openid=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:30:41     Send 页面  returnStr：{"errcode":48001,"errmsg":"api unauthorized"}
+
+2015-3-20 10:30:41      ============ 结束 获取微信用户相关信息 =====================
+
+2015-3-20 10:30:43     ============ 单次支付开始 ===============
+
+2015-3-20 10:30:43     传递支付参数：OrderSN=20150320103041、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:30:43     WeiPay 页面  sign：567BD3AD4D29C935CD3D9AFBE169B1B3
+
+2015-3-20 10:30:43     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[567BD3AD4D29C935CD3D9AFBE169B1B3]]></sign><spbill_create_ip><![CDATA[163.177.69.13]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320103041]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[a96b65a721e561e1e3de768ac819ffbb]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:30:44     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[G2GFPZZJD7n2mBIp]]></nonce_str>
+<sign><![CDATA[638930D655BA658A33005D9DE9F613CA]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320102057d8bee7a2820289773462]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:30:44     WeiPay 页面  package：prepay_id=wx20150320102057d8bee7a2820289773462
+
+2015-3-20 10:30:44     WeiPay 页面  paySign：293177DAD2E7AF38E9593455FDAD8566
+
+2015-3-20 10:30:56     ============ 单次支付开始 ===============
+
+2015-3-20 10:30:56     传递支付参数：OrderSN=20150320102828、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:30:56     WeiPay 页面  sign：B7CB5A6329F010A9294A78BF74989EAA
+
+2015-3-20 10:30:56     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[B7CB5A6329F010A9294A78BF74989EAA]]></sign><spbill_create_ip><![CDATA[180.153.206.16]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320102828]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[9872ed9fc22fc182d371c3e9ed316094]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:30:57     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[ubgPAARVDrzau4Zm]]></nonce_str>
+<sign><![CDATA[6874EDD299B768A92848B5F29D42A891]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320102111d93c3710960176211546]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:30:57     WeiPay 页面  package：prepay_id=wx20150320102111d93c3710960176211546
+
+2015-3-20 10:30:57     WeiPay 页面  paySign：1F0D25D78FE7FED4D5398A75BAA86F60
+
+2015-3-20 10:32:47      ============ 开始 获取微信用户相关信息 =====================
+
+2015-3-20 10:32:47     Send 页面  returnStr 第一个：{"access_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCBTJG-0eERmPegLozumBLUMxaglpfSuz-A9aHPynnkdOQD23V7CpIaIfPsccFJB1RG3_tcAwmMbAdXUW2GB4_1w","expires_in":7200,"refresh_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoChmaUuS2wKSXY3P7IX95_JU61dmWBeCRbPDER_yDLYAhc82GBOd-eXBF1YhRF10lo0ra2hZqIV_LWfJEq6LOPtg","openid":"o7OleuJLfftQZFTJNaoaVCOPHMWo","scope":"snsapi_base"}
+
+2015-3-20 10:32:48     Send 页面  access_token：OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCBTJG-0eERmPegLozumBLUMxaglpfSuz-A9aHPynnkdOQD23V7CpIaIfPsccFJB1RG3_tcAwmMbAdXUW2GB4_1w
+
+2015-3-20 10:32:48     Send 页面  openid=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:32:48     Send 页面  returnStr：{"errcode":48001,"errmsg":"api unauthorized"}
+
+2015-3-20 10:32:48      ============ 结束 获取微信用户相关信息 =====================
+
+2015-3-20 10:32:50     ============ 单次支付开始 ===============
+
+2015-3-20 10:32:50     传递支付参数：OrderSN=20150320103247、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:32:50     WeiPay 页面  sign：3340A40BE2D35B81027B176AB74FCB08
+
+2015-3-20 10:32:50     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[3340A40BE2D35B81027B176AB74FCB08]]></sign><spbill_create_ip><![CDATA[163.177.69.13]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320103247]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[140f6969d5213fd0ece03148e62e461e]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:32:50     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[1UcCW3wsTCCAaqUv]]></nonce_str>
+<sign><![CDATA[05EE636F9194E0AE28D31F9136510ED3]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201503201023042379745b8c0853029346]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:32:50     WeiPay 页面  package：prepay_id=wx201503201023042379745b8c0853029346
+
+2015-3-20 10:32:50     WeiPay 页面  paySign：77EAD8357320B8CDE1D78C13455621EE
+
+2015-3-20 10:33:17     ============ 单次支付开始 ===============
+
+2015-3-20 10:33:17     传递支付参数：OrderSN=20150320103041、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 10:33:17     WeiPay 页面  sign：D6185BC26BF61EB8230EA7CEBA347257
+
+2015-3-20 10:33:17     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[D6185BC26BF61EB8230EA7CEBA347257]]></sign><spbill_create_ip><![CDATA[101.226.89.115]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320103041]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[ccb1d45fb76f7c5a0bf619f979c6cf36]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 10:33:18     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[HWSRYqvztO5NaOhe]]></nonce_str>
+<sign><![CDATA[83B6A3573A0923945DDD656DF99CCC1E]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2015032010233107af88d6630126660908]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 10:33:18     WeiPay 页面  package：prepay_id=wx2015032010233107af88d6630126660908
+
+2015-3-20 10:33:18     WeiPay 页面  paySign：67395027E1246B4167EF61E09BDC5C92
+
+2015-3-20 11:05:06      ============ 开始 获取微信用户相关信息 =====================
+
+2015-3-20 11:05:06     Send 页面  returnStr 第一个：{"access_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCjBCJ6HWfhuEiMdSlpPjSm-EvH5mo4w2AX7KV88w-Ajci3OidETa9XJ8IeJho5m8S2mmyQbJuhrueHC5o-7DKTg","expires_in":7200,"refresh_token":"OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCx4MX_xRws3na0Q8QgwujJ7h032wqcdNSOUHPX3jhGX-enbtLHgYsEenxyJQ4eCDI-RzDWg8I2kp-cMBpqzIRng","openid":"o7OleuJLfftQZFTJNaoaVCOPHMWo","scope":"snsapi_base"}
+
+2015-3-20 11:05:07     Send 页面  access_token：OezXcEiiBSKSxW0eoylIeC-MZt0c2v2Icg1TiHGkbkzPWPX68ALJG9es_y9goSoCjBCJ6HWfhuEiMdSlpPjSm-EvH5mo4w2AX7KV88w-Ajci3OidETa9XJ8IeJho5m8S2mmyQbJuhrueHC5o-7DKTg
+
+2015-3-20 11:05:07     Send 页面  openid=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 11:05:07     Send 页面  returnStr：{"errcode":48001,"errmsg":"api unauthorized"}
+
+2015-3-20 11:05:07      ============ 结束 获取微信用户相关信息 =====================
+
+2015-3-20 11:05:09     ============ 单次支付开始 ===============
+
+2015-3-20 11:05:09     传递支付参数：OrderSN=20150320110506、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 11:05:09     WeiPay 页面  sign：2F7DB2B52721EABD8551D197D8D80A0E
+
+2015-3-20 11:05:09     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[2F7DB2B52721EABD8551D197D8D80A0E]]></sign><spbill_create_ip><![CDATA[183.61.34.39]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320110506]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[6ea9ab1baa0efb9e19094440c317e21b]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 11:05:10     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[3AH9FWIXz9MUd7Vl]]></nonce_str>
+<sign><![CDATA[3F05380548747D493C94390F946A21F6]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201503201055231cd9025b9e0299639298]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 11:05:10     WeiPay 页面  package：prepay_id=wx201503201055231cd9025b9e0299639298
+
+2015-3-20 11:05:10     WeiPay 页面  paySign：0B8DDE70E45A8C29CB76D312C9E46CAA
+
+2015-3-20 11:06:58     Notify 页面  返回数据：appid=wx44bb81a7538718c0&attach=test&bank_type=CCB_DEBIT&cash_fee=1&fee_type=CNY&is_subscribe=Y&mch_id=10018007&nonce_str=75fc093c0ee742f6dddaa13fff98f104&openid=o7OleuAgx-8QuT8kwoP0ccAYpLpI&out_trade_no=20150320093140&result_code=SUCCESS&return_code=SUCCESS&time_end=20150320092302&total_fee=1&trade_type=JSAPI&transaction_id=1006300215201503200034399181&key=xtyd35xtyd35xtyd35xtyd35xtyd3588、sign： 52FF4B12CD479E76501B71097C231141
+
+2015-3-20 11:06:58     Notify 页面  支付成功，支付信息：商家订单号：20150320093140、支付金额(分)：1、自定义参数：test
+
+2015-3-20 11:06:58     ============ 单次支付结束 ===============
+
+2015-3-20 11:08:43     Notify 页面  返回数据：appid=wx44bb81a7538718c0&attach=test&bank_type=GDB_CREDIT&cash_fee=1&fee_type=CNY&is_subscribe=Y&mch_id=10018007&nonce_str=da0d1111d2dc5d489242e60ebcbaf988&openid=o7OleuMh3PttrBVnbHbyQjkzVLV4&out_trade_no=20150320093420&result_code=SUCCESS&return_code=SUCCESS&time_end=20150320092444&total_fee=1&trade_type=JSAPI&transaction_id=1001210215201503200034399194&key=xtyd35xtyd35xtyd35xtyd35xtyd3588、sign： 535CB6BD26221DE1C6EE1A87809A0856
+
+2015-3-20 11:08:43     Notify 页面  支付成功，支付信息：商家订单号：20150320093420、支付金额(分)：1、自定义参数：test
+
+2015-3-20 11:08:43     ============ 单次支付结束 ===============
+
+2015-3-20 11:11:36     ============ 单次支付开始 ===============
+
+2015-3-20 11:11:36     传递支付参数：OrderSN=20150320110506、Body=商品描述、TotalFee=1、Attach=test、UserOpenId=o7OleuJLfftQZFTJNaoaVCOPHMWo
+
+2015-3-20 11:11:36     WeiPay 页面  sign：4471E44192D4ADACBA4E2E6A1343477C
+
+2015-3-20 11:11:36     WeiPay 页面  package（XML）：<xml><appid><![CDATA[wx44bb81a7538718c0]]></appid><trade_type><![CDATA[JSAPI]]></trade_type><sign><![CDATA[4471E44192D4ADACBA4E2E6A1343477C]]></sign><spbill_create_ip><![CDATA[222.73.77.55]]></spbill_create_ip><total_fee>1</total_fee><openid><![CDATA[o7OleuJLfftQZFTJNaoaVCOPHMWo]]></openid><out_trade_no><![CDATA[20150320110506]]></out_trade_no><attach><![CDATA[test]]></attach><mch_id><![CDATA[10018007]]></mch_id><body><![CDATA[商品描述]]></body><nonce_str><![CDATA[66f041e16a60928b05a7e228a89c3799]]></nonce_str><notify_url><![CDATA[http://m.yidu35.com/Notify.aspx]]></notify_url></xml>
+
+2015-3-20 11:11:36     WeiPay 页面  package（Back_XML）：<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx44bb81a7538718c0]]></appid>
+<mch_id><![CDATA[10018007]]></mch_id>
+<nonce_str><![CDATA[SMfnoXKxtcCwpBpH]]></nonce_str>
+<sign><![CDATA[959B3E40D8928B9F07B5A22CC020FB22]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2015032011014943936fbdc70805754183]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+2015-3-20 11:11:36     WeiPay 页面  package：prepay_id=wx2015032011014943936fbdc70805754183
+
+2015-3-20 11:11:36     WeiPay 页面  paySign：D14D276F27059E3C9612C02328EBDD10
+
+2015-3-20 11:12:13     Notify 页面  返回数据：appid=wx44bb81a7538718c0&attach=test&bank_type=CFT&cash_fee=1&fee_type=CNY&is_subscribe=Y&mch_id=10018007&nonce_str=92262bf907af914b95a0fc33c3f33bf6&openid=o7OleuMh3PttrBVnbHbyQjkzVLV4&out_trade_no=20150320093752&result_code=SUCCESS&return_code=SUCCESS&time_end=20150320092814&total_fee=1&trade_type=JSAPI&transaction_id=1001210215201503200034429886&key=xtyd35xtyd35xtyd35xtyd35xtyd3588、sign： C3C9E538CEFAF63D518F064E333A9BFD
+
+2015-3-20 11:12:13     Notify 页面  支付成功，支付信息：商家订单号：20150320093752、支付金额(分)：1、自定义参数：test
+
+2015-3-20 11:12:13     ============ 单次支付结束 ===============
+
+2015-3-20 11:12:44     Notify 页面  返回数据：appid=wx44bb81a7538718c0&attach=test&bank_type=CFT&cash_fee=1&fee_type=CNY&is_subscribe=Y&mch_id=10018007&nonce_str=97e8527feaf77a97fc38f34216141515&openid=o7OleuJLfftQZFTJNaoaVCOPHMWo&out_trade_no=20150320093837&result_code=SUCCESS&return_code=SUCCESS&time_end=20150320092843&total_fee=1&trade_type=JSAPI&transaction_id=1000110215201503200034427328&key=xtyd35xtyd35xtyd35xtyd35xtyd3588、sign： A1EABE29AA2B7A2E2A3EDD51BA66B7E7
+
+2015-3-20 11:12:44     Notify 页面  支付成功，支付信息：商家订单号：20150320093837、支付金额(分)：1、自定义参数：test
+
+2015-3-20 11:12:44     ============ 单次支付结束 ===============
+

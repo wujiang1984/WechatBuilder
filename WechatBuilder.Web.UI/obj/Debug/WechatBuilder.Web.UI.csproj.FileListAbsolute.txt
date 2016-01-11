@@ -1,0 +1,15 @@
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\obj\Debug\WechatBuilder.Web.UI.csprojResolveAssemblyReference.cache
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.Web.UI.dll
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.Web.UI.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.BLL.dll
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.Common.dll
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.Model.dll
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.DAL.dll
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.DBUtility.dll
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.BLL.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.Common.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.Model.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.DAL.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\bin\Debug\WechatBuilder.DBUtility.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\obj\Debug\WechatBuilder.Web.UI.dll
+E:\MySpace\WechatBuilder\WechatBuilder.Web.UI\obj\Debug\WechatBuilder.Web.UI.pdb

@@ -1,0 +1,33 @@
+#cate15 .mainmenu li:nth-child(10n+1) a{
+        background-color:rgba(255, 152, 0, 0.46);
+}
+#cate15 .mainmenu li:nth-child(10n+2) a{
+        background-color:rgba(255, 51, 0, 0.46);
+}
+#cate15 .mainmenu li:nth-child(10n+3) a{
+        background-color:rgba(255, 254, 0, 0.46);
+}
+#cate15 .mainmenu li:nth-child(10n+4) a{
+        background-color:rgba(121, 255, 0, 0.46);/*rgb颜色及透明度0.46，可以自行调整*/
+}
+#cate15 .mainmenu li:nth-child(10n+5) a{
+        background-color: rgba(0, 192, 255, 0.46);
+}
+#cate15 .mainmenu li:nth-child(10n+6) a{
+        background-color: rgba(206, 0, 255, 0.46);
+}
+#cate15 .mainmenu li:nth-child(10n+7) a{
+        background-color: rgba(113, 0, 255, 0.46);
+}
+#cate15 .mainmenu li:nth-child(10n+8) a{
+        background-color: rgba(255, 0, 211, 0.46);
+}
+#cate15 .mainmenu li:nth-child(10n+9) a{
+        background-color: rgba(255, 101, 0, 0.46);
+}
+#cate15 .mainmenu li:nth-child(10n+10) a{
+        background-color: rgba(255, 152, 0, 0.46);
+} 
+#cate15 .mainmenu {
+    bottom: 60px;  /*60px表示距离底部60个像素，可以自行调整*/
+} 

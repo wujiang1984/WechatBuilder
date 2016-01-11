@@ -1,0 +1,72 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <title>{$model.productName}</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link href="/shop/templates/default/css/style.css" rel="stylesheet" />
+    <link href="/shop/templates/default/css/templates.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var basePath = "{$yuming}", baseParam = "";
+    </script>
+
+
+
+
+    <style type="text/css">
+        .mod_fold .fold_detail img {
+            display: block;
+            width: 100%;
+        }
+
+        .mod_fold .maxheight {
+            max-height: 200px;
+        }
+        #order_succ {
+        text-align:center;
+        line-height:40px;
+        color:green;
+        padding-top:20px;
+        }
+    </style>
+</head>
+<body>
+    <!--_header-->
+    <vt:template id="header" file="_header.html" charset="utf-8" />
+    <!--/_header-->
+
+    <div class="lay_page page_detail current" id="page_detail">
+        <div class="lay_page_wrap">
+            
+             
+            <div class="fn_detail qb_gap qb_fs_l">
+                <h1 id="order_succ">
+                    <img alt="" src="/shop/templates/default/images/nike@2x.png"/>
+                     <strong> 下单成功！</strong><br />
+                    订单号：{$order.order_no}<br />
+                    <strong>总计金额：{$order.real_amount}元</strong><br />
+                    下单时间：{$order.add_time format="yyyy-MM-dd HH:mm:ss"}<br />
+                    我们将以最快的速度发货！</h1>
+            </div>
+             
+        </div>
+    </div>
+     
+    <!--_bottom-->
+    <vt:template id="_bottom" file="_bottom.html" charset="utf-8" />
+    <!--/_bottom-->
+
+    <!--_share_js-->
+    <vt:template id="share_js" file="_share_js.html" charset="utf-8" />
+    <!--/_share_js-->
+
+    <script src="/shop/templates/default/js/zepto.min.js"></script>
+    <script src="/shop/templates/default/js/imagesloaded.pkgd.min.js"></script>
+     
+</body>
+</html>

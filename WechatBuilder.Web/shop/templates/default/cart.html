@@ -1,0 +1,108 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <title>购物车</title>
+    
+<meta charset="UTF-8">
+
+<meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="/shop/templates/default/css/style.css" rel="stylesheet" />
+<link href="/shop/templates/default/css/templates.css" rel="stylesheet" />
+ <script type="text/javascript">
+     var basePath = "{$yuming}", baseParam = "";
+ </script>
+ 
+</head>
+<body>
+    
+ <!--_header-->
+    <vt:template id="header" file="_header.html" charset="utf-8" />
+<!--/_header-->	
+
+
+    <div class="lay_page current">
+        <div class="lay_page_wrap">
+            <input type="hidden" id="items-len" value="2" />
+            <input type="hidden" id="problem-Len" value="0" />
+            <section id="content">  
+                <section id="item-sec">
+                  <vt:foreach from="$cartlist" item="cproduct" index="i"  >
+
+               <div class="mod_cell ui_plr0 ui_mt15 qb_mb15 item" id="{$cproduct.seq}" last-count="{$cproduct.productNum}" price="{$cproduct.avgPrice100}">
+                                <div class="mod_celltitle qb_fs_s ui_plr10">
+                                    <h3 class="qb_fl"><i price="{$cproduct.avgPrice100}" class="qb_icon icon_checkbox icon_checkbox_checked" price="{$cproduct.avgPrice100}" index="{$i}" name="cart_checkbox"></i></h3>
+                                </div>
+                                <div class="ui_plr10">
+                                    <ul class="mod_list mod_list_hr qb_fs_s">
+                                        <li class="list_item qb_mb10 qb_bfc">
+                                            <a href="{$cproduct.productUrl}" class="bfc_f">
+                                                <img src="{$cproduct.productPic}" /></a>
+                                            <div class="bfc_c">
+                                                <p>{$cproduct.productName}[{$cproduct.skuInfo}]</p>
+                                                <p>单价：<span class="ui_color_strong">￥{$cproduct.avgPrice}元</span></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="qb_tar ui_p10 qb_fs_s ui_bg_color_weak ui-bt">
+                                    <i class="qb_icon icon_trash ui_mr30 icon_delete"></i>数量：<input type="tel" class="ui_textinput ui_textinput_tiny count" value="{$cproduct.productNum}" />
+                                    <span class="qb_tof" style="width: 100px">共计：<span class="ui_color_strong single-total">￥{$cproduct.totPrice}元</span></span>
+                                </div>
+                                <input type="hidden" class="cmdy-data" supportcod="true" num="{$cproduct.productNum}" limit="0" storenum="{$cproduct.stock}" ic="{$cproduct.id}" mid="{$cproduct.productId}" sa="" />
+                            </div>
+
+                         </vt:foreach>
+                    <div class="mod_cell ui_mt15 qb_mb15 ui_pt10">
+                       
+                        <div class="ui_pb10 ui_clearfix qb_fs_s">
+                            <div class="qb_fl">
+                                <span class="ui_mr30 ui_pt10"><i class="qb_icon icon_checkbox icon_checkbox_checked" id="choose-all"></i>全选</span>
+                                总价：<span class="ui_color_strong">￥<span id="total">{$alltot}</span></span>
+                            </div>
+                            <span class="mod_btn btn_strong qb_fr confirm_order">去结算</span>
+                        </div>
+                    </div>
+                </section> 
+                  <input type="hidden" value="{$wid}" id="hidwid" name="hidwid">
+                 <input type="hidden" value="" id="itemList" name="itemList">
+                <form action="/shop/confirmOrder.aspx?wid={$wid}&openid={$openid}" method="get" name="cartForm">
+                    
+                    <input type="hidden" value="0" id="payType" name="payType">
+                   
+                    <input type="hidden" value="1" id="cart" name="cart" />
+                    <input type="hidden" id="trandom" name="t"> 
+                    <input type="hidden" value="{$openid}" id="openid" name="openid">
+                     <input type="hidden" value="{$wid}" id="wid" name="wid">
+                </form>
+            </section>
+        </div>
+    </div>
+    <div class="qb_quick_tip qb_none" id="bubble"></div>
+    <div class="mod_dialog qb_none" id="message-notice">
+        <div class="dialog_mask"></div>
+        <div class="dialog_main qb_br qb_tac">
+            <div class="dialog_bd" id="notice-content"></div>
+            <div class="dialog_ft qb_flex"><a href="javascript:void(0);" class="flex_box" id="notice-cancel">取消</a><a href="javascript:void(0);" class="flex_box" id="notice-sure">确定</a></div>
+        </div>
+    </div>
+    
+      <!--_bottom-->
+       <vt:template id="_bottom" file="_bottom.html" charset="utf-8" />
+    <!--/_bottom-->	
+ 
+    <script src="/shop/templates/default/js/zepto.min.js"></script>
+ 
+    <script type="text/javascript">
+        var itemArray, wxInfo, suin, onlyonline;
+        itemArray = {$cartStr};
+        wxInfo = { isFocus: "true", wxId: "ONLY_BESTSELLER" };
+        suin = "1814851631", onlyonline = "true";
+        mobile.o2ocn.cmdy.init();
+
+
+    </script>
+</body>
+</html>

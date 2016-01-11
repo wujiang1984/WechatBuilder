@@ -1,0 +1,98 @@
+.listTitle {
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	overflow:hidden;
+	padding:2px 20px 2px 20px;
+	border:1px solid #d3d3d3;
+	background-color:#f1f1f1
+}
+*zoom:1 .listTitle:after {
+clear:both;
+content:"";
+display:block;
+height:0;
+visibility:hidden
+}
+TABLE.ListProduct {
+	BORDER-TOP: #d3d3d3 1px solid;
+	MARGIN-TOP: 5px;
+	WIDTH: 100%;
+	MARGIN-BOTTOM: 5px;
+	_border-collapse: collapse;
+}
+TABLE.ListProduct THEAD TH {
+	BORDER-BOTTOM: #d3d3d3 1px solid;
+	PADDING-BOTTOM: 5px;
+	BACKGROUND-COLOR: #f1f1f1;
+	PADDING-LEFT: 5px;
+	PADDING-RIGHT: 5px;
+	COLOR: #666;
+	FONT-SIZE: 14px;
+	BORDER-TOP: #e3e3e3 1px solid;
+	FONT-WEIGHT: normal;
+	BORDER-RIGHT: #ddd 1px solid;
+	PADDING-TOP: 5px;
+	color:#000000;
+	font-weight:bold
+}
+TABLE.ListProduct TBODY TD {
+	BORDER-BOTTOM: #eee 1px solid;
+	PADDING-BOTTOM: 10px;
+	PADDING-LEFT: 5px;
+	PADDING-RIGHT: 5px;
+	BORDER-RIGHT: #eee 1px solid;
+	PADDING-TOP: 10px;
+	font-size:12px;
+	_empty-cells:show;
+	word-break: break-all;
+}
+TABLE.ListProduct TBODY TR:nth-child(2n+1) {
+ background-color:#FCFCFC;
+}
+TABLE.ListProduct TBODY TR:nth-child(2n+2) {
+ background-color:#ffffff;
+}
+TABLE.ListProduct TBODY TR:hover {
+	background-color:#F1FCEA;
+}
+TABLE.ListProduct TBODY TD p {
+	PADDING: 0;
+	font-size:12px;
+	_empty-cells:show;
+	word-break: break-all;
+}
+TABLE.ListProduct Tfoot TD {
+	BORDER-BOTTOM: #eee 1px solid;
+	PADDING-BOTTOM: 10px;
+	PADDING-LEFT: 5px;
+	PADDING-RIGHT: 5px;
+	BORDER-RIGHT: #eee 1px solid;
+	PADDING-TOP: 10px;
+	background-color:#f9f9f9;
+	font-size:12px;
+	_empty-cells:show;
+	word-break: break-all;
+}
+TABLE.ListProduct THEAD TH.norightborder {
+	BORDER-RIGHT: 0;
+}
+TABLE.ListProduct TBODY TD.norightborder {
+	BORDER-RIGHT: 0;
+}
+TABLE.ListProduct .select {
+	width: 30px;
+}
+TABLE.ListProduct .keywords {
+	width: 150px;
+}
+TABLE.ListProduct .answer {
+	width: 375px;
+}
+TABLE.ListProduct .answer_text {
+	width: 360px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	height:16px
+}

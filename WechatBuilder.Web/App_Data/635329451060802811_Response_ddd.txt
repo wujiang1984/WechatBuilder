@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <ToUserName><![CDATA[ddd]]></ToUserName>
+  <FromUserName><![CDATA[gh_161b0f5a4e27]]></FromUserName>
+  <CreateTime>1397319506</CreateTime>
+  <MsgType>text</MsgType>
+  <Content><![CDATA[您刚刚上传了一个图片]]></Content>
+  <FuncFlag>0</FuncFlag>
+</xml>

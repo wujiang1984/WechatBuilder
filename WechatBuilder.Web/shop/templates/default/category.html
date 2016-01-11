@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+
+    <title>全部分类</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link href="/shop/templates/default/css/style.css" rel="stylesheet" />
+    <link href="/shop/templates/default/css/templates.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var basePath = "{$yuming}", baseParam = "";
+    </script>
+
+</head>
+<body>
+    <!--_header-->
+    <vt:template id="header" file="_header.html" charset="utf-8" />
+    <!--/_header-->
+
+    <div class="lay_page ">
+        <div class="lay_page_wrap">
+            <div class="fn_ad ad_bigpic">
+                <!--分类信息 -->
+                <vt:function var="category" method="getCategory" type="$this" />
+                <vt:foreach from="$category" item="c" index="i">
+                             
+                             <a class="ui_clearfix" href="{$c.link_url}">
+                             <img src='{$c.ico_url}'  class="ad_img ui_fluid" />
+                            <div class="ad_detail">
+                                <p class="qb_fs_l"><strong>{$c.title}</strong></p>
+                                <p class="qb_fs_s">{$c.class_content}</p>
+                            </div>
+                        </a>
+
+                        </vt:foreach>
+                <!--分类信息 end -->
+
+            </div>
+
+
+            <!--_bottom-->
+            <vt:template id="_bottom" file="_bottom.html" charset="utf-8" />
+            <!--/_bottom-->
+
+        </div>
+    </div>
+      <input type="hidden" value="{$wid}" id="hidwid" name="hidwid">
+      <input type="hidden" value="{$openid}" id="openid" name="openid">
+    <div class="qb_quick_tip qb_none" id="bubble"></div>
+    <script src="/shop/templates/default/js/zepto.min.js"></script>
+    <!--_share_js-->
+    <vt:template id="share_js" file="_share_js.html" charset="utf-8" />
+    <!--/_share_js-->
+    <script type="text/javascript">
+
+        mobile.o2ocn.topic.init();
+
+    </script>
+</body>
+</html>
+
+

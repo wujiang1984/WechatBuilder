@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+<ToUserName><![CDATA[gh_161b0f5a4e27]]></ToUserName>
+<FromUserName><![CDATA[ddd]]></FromUserName>
+<CreateTime>1397319297</CreateTime>
+<MsgType><![CDATA[image]]></MsgType>
+<PicUrl><![CDATA[https://mp.weixin.qq.com/cgi-bin/getimgdata?token=1818104102&msgid=200318473&mode=large&source=&fileId=0&ow=1681793591.jpg]]></PicUrl>
+<MsgId>1234567890123456</MsgId>
+</xml>

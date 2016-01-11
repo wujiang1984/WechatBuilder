@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <ToUserName><![CDATA[dddd25]]></ToUserName>
+  <FromUserName><![CDATA[gh_161b0f5a4e27]]></FromUserName>
+  <CreateTime>1393863056</CreateTime>
+  <MsgType>text</MsgType>
+  <Content><![CDATA[【喜帖3】将于2014/4/2 17:52:53举办，现已经结束]]></Content>
+  <FuncFlag>0</FuncFlag>
+</xml>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <ToUserName><![CDATA[funLLPPP]]></ToUserName>
+  <FromUserName><![CDATA[gh_161b0f5a4e27]]></FromUserName>
+  <CreateTime>1393698781</CreateTime>
+  <MsgType>news</MsgType>
+  <ArticleCount>1</ArticleCount>
+  <Articles>
+    <item>
+      <Title><![CDATA[刮刮卡活动已经结束了]]></Title>
+      <Description><![CDATA[亲，活动已经结束，请继续关注我们的后续活动哦。]]></Description>
+      <PicUrl><![CDATA[http://localhost:820/upload/201403/01/201403012211496675.png]]></PicUrl>
+      <Url><![CDATA[http://localhost:820/weixin/sticket/end.aspx?wid=5&aid=1&token=1393698781&openid=funLLPPP&wxref=mp.weixin.qq.com]]></Url>
+    </item>
+  </Articles>
+  <FuncFlag>0</FuncFlag>
+</xml>

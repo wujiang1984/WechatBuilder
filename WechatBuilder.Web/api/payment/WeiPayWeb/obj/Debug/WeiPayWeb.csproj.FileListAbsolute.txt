@@ -1,0 +1,8 @@
+D:\微信支付\WeiPayWeb\bin\WeiPayWeb.dll
+D:\微信支付\WeiPayWeb\bin\WeiPayWeb.pdb
+D:\微信支付\WeiPayWeb\bin\Newtonsoft.Json.dll
+D:\微信支付\WeiPayWeb\bin\WeiPay.dll
+D:\微信支付\WeiPayWeb\bin\WeiPay.pdb
+D:\微信支付\WeiPayWeb\obj\Debug\ResolveAssemblyReference.cache
+D:\微信支付\WeiPayWeb\obj\Debug\WeiPayWeb.dll
+D:\微信支付\WeiPayWeb\obj\Debug\WeiPayWeb.pdb

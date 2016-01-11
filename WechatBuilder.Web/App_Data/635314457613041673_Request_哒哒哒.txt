@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+<ToUserName><![CDATA[gh_161b0f5a4e2711]]></ToUserName>
+<FromUserName><![CDATA[哒哒哒]]></FromUserName>
+<CreateTime>1395820160</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[会员卡2]]></Content>
+<MsgId>1234567890123456</MsgId>
+</xml>

@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="/templatesstore/css/iscroll.css" rel="stylesheet" type="text/css" />
+
+    <script src="/templatesstore/js/iscroll.js" type="text/javascript"></script>
+
+    <script src="js/shake.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var myScroll;
+
+        function loaded() {
+            myScroll = new iScroll('wrapper', {
+                snap: true,
+                momentum: false,
+                hScrollbar: false,
+                onScrollEnd: function () {
+                    document.querySelector('#indicator > li.active').className = '';
+                    document.querySelector('#indicator > li:nth-child(' + (this.currPageX + 1) + ')').className = 'active';
+                }
+            });
+
+
+        }
+        function yyl() {
+
+            myScroll.scrollToPage('next', 0, 400, count);
+
+        }
+
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+        window.onload = function() {
+         
+            window.addEventListener('shake', yyl, false);
+
+             
+            };
+
+    </script>
+    <style type="text/css">
+        #divtip {
+            margin-bottom:50px;
+        
+        }
+        #tipinfo {
+            display: block;
+height: 40px;
+line-height: 40px;
+font-size: 17px;
+color: #fff;
+background-color: #202020;
+background-image: -webkit-gradient(linear,left top,left bottom,from(#2f2f2f),to(#202020));
+background-image: -webkit-linear-gradient(top,#2f2f2f,#202020);
+background-image: linear-gradient(to bottom,#2f2f2f,#202020);
+text-shadow: none;
+box-shadow: none;
+border: 1px solid #eaeaea;
+text-align: center;
+text-decoration: none;
+-webkit-appearance: none;
+}
+
+    </style>
+
+</head>
+<body id="cate1">
+     <div id="divtip">
+     <div id="tipinfo">摇一摇换图</div>
+    </div>
+    <div class="banner">
+        <div id="wrapper">
+            <div id="scroller">
+                <ul id="thelist">
+                    <li>
+                        <p>幻灯片1</p>
+                        <img src="http://61422.vshop.weimob.com/data/61422/attached/image/goods/20140220/small/20140220153333_8333.jpg">
+                    </li>
+                    <li>
+                        <p>大图2</p>
+                        <img src="http://duoyonghu.yubom.net/upload/201403/31/201403312306102199.jpg">
+                    </li>
+                       <li>
+                        <p>幻灯片3</p>
+                        <img src="http://61422.vshop.weimob.com/data/61422/attached/image/goods/20140220/small/20140220153334_4075.jpg">
+                    </li>
+                    <li>
+                        <p>大图4</p>
+                        <img src=" http://61422.vshop.weimob.com/data/61422/attached/image/goods/20140217/small/20140217150030_2663.jpg">
+                    </li>
+                       <li>
+                        <p>幻灯片5</p>
+                        <img src="http://61422.vshop.weimob.com/data/61422/attached/image/goods/20140217/small/20140217150030_4743.jpg">
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div id="nav">
+            <div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,5);return false">&larr; prev</div>
+            <ul id="indicator">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+
+            </ul>
+            <div id="next" onclick="myScroll.scrollToPage('next', 0,400,5);return false">next &rarr;</div>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+   
+   
+
+    <script>
+        var count = document.getElementById("thelist").getElementsByTagName("img").length;
+
+        var count2 = document.getElementsByClassName("menuimg").length;
+        for (i = 0; i < count; i++) {
+            document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:" + document.body.clientWidth + "px";
+
+        }
+        document.getElementById("scroller").style.cssText = " width:" + document.body.clientWidth * count + "px";
+
+        //setInterval(function () {
+        //    myScroll.scrollToPage('next', 0, 400, count);
+        //}, 3500);
+        window.onresize = function () {
+            for (i = 0; i < count; i++) {
+                document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:" + document.body.clientWidth + "px";
+
+            }
+            document.getElementById("scroller").style.cssText = " width:" + document.body.clientWidth * count + "px";
+        }
+
+
+    </script>
+
+
+    
+
+</body>
+</html>

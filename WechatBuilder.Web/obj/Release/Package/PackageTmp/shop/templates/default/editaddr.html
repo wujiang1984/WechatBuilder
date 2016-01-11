@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <title>新增收货地址</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link href="/shop/templates/default/css/style.css" rel="stylesheet" />
+    <link href="/shop/templates/default/css/templates.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var basePath = "{$yuming}", baseParam = "";
+    </script>
+</head>
+<body>
+ <!--_header-->
+    <vt:template id="header" file="_header.html" charset="utf-8" />
+<!--/_header-->	
+
+    <input type="hidden" id="isUpdate" name="isUpdate" value="-1" />
+    <input type="hidden" id="oprTip" name="oprTip" value="0" />
+    <input type="hidden" id="provId" name="provId" value="-1" />
+
+    <form method="post" action="editaddr.aspx?myact=editAddr" id="ctl00">
+          <input type="hidden" value="{$openid}" id="openid" name="openid">
+          <input type="hidden" value="{$wid}" id="wid" name="wid">
+           <input type="hidden" value="{$frompage}" id="frompage" name="frompage">
+        <div class="lay_page page_address_add" id="page_address_add">
+            <div class="lay_page_wrap">
+                <div class="qb_gap qb_pt10">
+
+                    <div class="qb_mb10 qb_flex">
+                        <input name="name" type="text" id="name" class="mod_input flex_box" placeholder="收件人姓名"  value="{$addrinfo.contractPerson}" />
+                    </div>
+                    <div class="qb_mb10 mod_color_strong qb_fs_s qb_none" id="name_msg"></div>
+                    <div>
+                        城市：
+                        <span class="mod_select qb_mr10 qb_mb10" id="sprovince" data-url="/shop/shopmgr.ashx?myact=getCity">
+                            <select name="pvid" id="province">
+                                <option value="-1">选择省</option>
+                            </select>
+                        </span>
+                        <span class="mod_select qb_mr10" id="scity" data-url="/shop/shopmgr.ashx?myact=getArea">
+                            <select name="ctid" id="city">
+                                <option value="-1">选择市</option>
+
+                            </select></span>
+                        <span class='mod_select qb_mb10'>
+                            <select name="regionId" id="regionId">
+                                <option value="-1">选择区</option>
+
+                            </select></span>
+                    </div>
+                    <div class="qb_mb10 mod_color_strong qb_fs_s qb_none" id="region_msg"></div>
+                    <div class="qb_mb10 qb_flex">
+                        <input name="address" type="text" id="address" class="mod_input flex_box" placeholder="详细地址" value="{$addrinfo.addrDetail}" />
+                    </div>
+                    <div class="qb_mb10 mod_color_strong qb_fs_s qb_none" id="address_msg"></div>
+                    <div class="qb_mb10 qb_flex">
+                        <input name="mobile" type="text" id="mobile" placeholder="联系电话" class="mod_input flex_box" value="{$addrinfo.tel}" />
+                    </div>
+                    <div class="qb_mb10 mod_color_strong qb_fs_s qb_none" id="mobile_msg"></div>
+                    <div class="qb_mb10">
+                        <a id="save_addr" class="mod_btn btn_em btn_block" href="javascript:void(0)">保存收货地址</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+      <!--_bottom-->
+       <vt:template id="_bottom" file="_bottom.html" charset="utf-8" />
+    <!--/_bottom-->	
+     
+    <script src="/shop/templates/default/js/zepto.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            document.getElementById("mobile").setAttribute("type", "tel");
+            $("#province").val("{$addrinfo.province}");
+            $("#city").val("{$addrinfo.city}");
+            $("#regionId").val("{$addrinfo.area}");
+        })
+    </script>
+    <script type="text/javascript">
+        mobile.o2ocn.address.init();
+    </script>
+</body>
+</html>
+

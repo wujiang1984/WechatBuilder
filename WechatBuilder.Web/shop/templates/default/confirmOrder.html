@@ -1,0 +1,173 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <title>订单确认</title>
+    
+<meta charset="UTF-8">
+
+<meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="/shop/templates/default/css/style.css" rel="stylesheet" />
+<link href="/shop/templates/default/css/templates.css" rel="stylesheet" />
+ <script type="text/javascript">
+     var basePath = "{$yuming}", baseParam = "";
+ </script>
+ 
+</head>
+<body>
+    
+ <!--_header-->
+    <vt:template id="header" file="_header.html" charset="utf-8" />
+<!--/_header-->	
+     <input type="hidden" value="{$wid}" id="hidwid" name="hidwid">
+    <input type="hidden" value="{$openid}" id="openid" name="openid">
+ <div class="lay_page page_order current" id="page_order">
+        <div class="lay_page_wrap">
+            <ul class="mod_addresslist ui_mt15 ui_mb15">
+                <li class="address_item arrow" id="toAddrList" evttag="toAddrList">
+                    <div class="address_detail">
+                        <p evttag="toAddrList">
+                            收件人：{$addrinfo.contractPerson}<span class="ui_color_weak">{$addrinfo.tel}</span>
+                            <span id="goaddlist" style="display: none" addr="/shop/editaddr.aspx?wid={$wid}&openid={$openid}&frompage=confirmOrder.aspx"></span>
+                        </p>
+                        <p evttag="toAddrList" class="address qb_fs_m">{$addrinfo.province}{$addrinfo.city}{$addrinfo.area}{$addrinfo.addrDetail}</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="mod_cell ui_p10">
+                <div class="qb_flex">
+                    <div class="mod_select select_block flex_box">
+                        <select data-price="160120" evttag="sendType" id="select_shipFee">
+                            <vt:foreach from="$express" item="exp" index="i">
+                                    <option value="{$exp.express_fee100}" mtype="{$exp.id}" ptype="0">{$exp.title}: ￥{$exp.express_fee}元</option>
+                                  </vt:foreach>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="mod_cell ui_p10">
+                <div class="qb_flex">
+                    <div class="mod_select select_block flex_box">
+                        <select evttag="changePay">
+                            <option value="-1">请选择支付方式</option>
+                             <vt:foreach from="$payment" item="pay" index="i">
+                                  <option value="{$pay.pTypeId}">{$pay.title}</option>
+                             </vt:foreach>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="mod_cell_hr"></div>
+            <div class="mod_cell">
+                <div class="mod_celltitle">商品详情</div>
+                <div class="ui_color_weak qb_mb10"></div>
+                <ul class="mod_list">
+                     <vt:foreach from="$cartlist" item="cproduct" index="i"  >
+                          <li class="list_item qb_mb10 qb_bfc">
+                                <a href="{$cproduct.productUrl}" class="bfc_f">
+                                    <img src="{$cproduct.productPic}" width="100" height="100" alt=""></a>
+                                <div class="bfc_c">
+                                    <p>{$cproduct.productName} {$cproduct.skuInfo}</p>
+                                    <p class="qb_fs_s ui_color_weak">数量: {$cproduct.productNum}&nbsp;&nbsp;价格：<strong class="mod_color_strong">￥{$cproduct.totPrice}元</strong> </p>
+                                </div>
+                            </li>
+                     </vt:foreach>
+                          
+                </ul>
+                <div class="qb_flex qb_mb10" id="coupon-node" index="0"></div>
+                <div class="qb_flex qb_mb10" id="promote-node" index="0"></div>
+                <div class="mod_cell_hr"></div>
+                <div class="ui_mb10">
+                    <p class="ui_align_right qb_none" id="free-div"></p>
+                    <p class="ui_align_right qb_none" id="dealoff-div">优惠金额：<strong class="mod_color_strong"><span id="dealoff-price"></span></strong></p>
+                    <p class="ui_align_right">应付金额：<strong class="mod_color_strong"><span id="total-price"></span></strong></p>
+                </div>
+            </div>
+            <div class="ui_gap">
+                <a id="submit-order" evttag="submitOrder" class="mod_btn btn_strong btn_block">提交订单</a>
+            </div>
+            <div class="qb_gap">
+                <form action="http://weigou.qq.com/o2ov1/cn/cmdy/confirmOrder.xhtml" method="get" name="cartForm">
+                    <input type="hidden" value="10" id="payType" name="payType">
+                    <input type="hidden" value="2F702C6C0000000004010000299520A7-颜色:030蓝 Blue|尺码:175/92A/XL-1" id="itemList" name="itemList">
+                    <input type="hidden" value="45413" id="adid" name="adid">
+                    <input type="hidden" value="7-1-5" id="prePageId" name="prePageId">
+                    <input type="hidden" value="" id="gcfa" name="gcfa">
+                    <input type="hidden" value="" id="icfa" name="icfa">
+                    <input type="hidden" value="1814851631" id="bid" name="bid">
+                    <input type="hidden" value="" id="ifb" name="ifb">
+                     
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="qb_quick_tip qb_none" id="bubble"></div>
+    <div class="mod_dialog qb_none" id="message-notice">
+        <div class="dialog_mask"></div>
+        <div class="dialog_main qb_br qb_tac">
+            <div class="dialog_bd" id="notice-content"></div>
+            <div class="dialog_ft qb_flex"><a href="javascript:void(0);" class="flex_box" id="notice-cancel">取消</a><a href="javascript:void(0);" class="flex_box" id="notice-sure">确定</a></div>
+        </div>
+    </div>
+    <script type="text/template" id="Script1">
+        <div class="mod_select select_block flex_box">
+            <select id="Select1" evttag="{#evtTag#}">{#optList#}</select>
+        </div>
+    </script>
+    <script type="text/template" id="Script2">
+        <li index="{#index#}">{#name#} <span class="mod_color_weak">{#mobile#}</span>{#selected#}<div class="address">{#address#}</div>
+        </li>
+    </script>
+    <script type="text/template" id="Script3">
+        <div class="qb_tar qb_mb10">货到付款优惠（减免零头）：<strong class="mod_color_strong qb_fs_s">&yen;{#free#}</strong></div>
+        <div class="qb_tar">包裹小计：<strong class="mod_color_strong">&yen;{#pkgTotal#}</strong></div>
+    </script>
+
+    
+      <!--_bottom-->
+       <vt:template id="_bottom" file="_bottom.html" charset="utf-8" />
+    <!--/_bottom-->	
+
+ 
+    <script type="text/template" id="promote-tpl">
+        <div class="mod_select select_block flex_box">
+            <select id="{#id#}" evttag="{#evtTag#}">{#optList#}</select>
+        </div>
+    </script>
+    <script type="text/template" id="addr-tpl">
+        <li index="{#index#}">{#name#} <span class="mod_color_weak">{#mobile#}</span>{#selected#}<div class="address">{#address#}</div>
+        </li>
+    </script>
+    <script type="text/template" id="free-tpl">
+        <div class="qb_tar qb_mb10">货到付款优惠（减免零头）：<strong class="mod_color_strong qb_fs_s">&yen;{#free#}</strong></div>
+        <div class="qb_tar">包裹小计：<strong class="mod_color_strong">&yen;{#pkgTotal#}</strong></div>
+    </script>
+
+
+
+    <script src="/shop/templates/default/js/zepto.min.js"></script>
+    <script type="text/javascript">
+        var pageParam, promoteIndex, subParam;
+        pageParam = {
+            "adid": "45413",
+            "cart": 1,
+            "totalPrice": "{$alltot}",
+            "totalCount": "1",
+            "payType": "0",
+            "minipay": "true",
+            "promotion": [
+            ],
+            "coupon": [
+
+            ]
+        };
+        subParam = {$cartStr};
+        mobile.o2ocn.cmdyDeal.init();
+
+
+    </script>
+
+</body>
+</html>

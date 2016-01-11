@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+.wrap{ margin:0 auto; clear:both; width:980px; text-align:left; }
+	.wrap:after{clear:both;content:".";display:block;height:0;visibility:hidden;}
+.boxwrap{ margin:0 auto;width:978px; height:auto; border:1px solid #E2E2E2; background:#FAFAFA; text-align:left; }
+	.boxwrap:after{clear:both;content:".";display:block;height:0;visibility:hidden;}
+
+.left180{float:left;width:180px;}
+.left264{float:left;width:264px;}
+.left294{float:left;width:294px;}
+.left300{float:left;width:300px;}
+.left325{float:left;width:325px;}
+.left710{float:left;display:inline;width:710px;border-right:1px solid #E2E2E2;background:#fff;overflow:hidden;}
+
+.right325{float:right;width:325px;}
+.right350{float:right;width:350px;}
+.right356{float:right;width:356px;}
+.right757{float:right;position:relative;width:757px;padding:20px;border-left:1px solid #E2E2E2;background:#fff;min-height:470px;_height:470px;}

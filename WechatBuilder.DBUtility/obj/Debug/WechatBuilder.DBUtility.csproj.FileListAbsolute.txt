@@ -1,0 +1,7 @@
+E:\MySpace\WechatBuilder\WechatBuilder.DBUtility\obj\Debug\WechatBuilder.DBUtility.csprojResolveAssemblyReference.cache
+E:\MySpace\WechatBuilder\WechatBuilder.DBUtility\bin\Debug\WechatBuilder.DBUtility.dll
+E:\MySpace\WechatBuilder\WechatBuilder.DBUtility\bin\Debug\WechatBuilder.DBUtility.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.DBUtility\bin\Debug\WechatBuilder.Common.dll
+E:\MySpace\WechatBuilder\WechatBuilder.DBUtility\bin\Debug\WechatBuilder.Common.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.DBUtility\obj\Debug\WechatBuilder.DBUtility.dll
+E:\MySpace\WechatBuilder\WechatBuilder.DBUtility\obj\Debug\WechatBuilder.DBUtility.pdb

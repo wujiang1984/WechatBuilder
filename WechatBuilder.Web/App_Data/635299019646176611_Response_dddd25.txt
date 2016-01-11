@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <ToUserName><![CDATA[dddd25]]></ToUserName>
+  <FromUserName><![CDATA[gh_161b0f5a4e27]]></FromUserName>
+  <CreateTime>1394276363</CreateTime>
+  <MsgType>news</MsgType>
+  <ArticleCount>1</ArticleCount>
+  <Articles>
+    <item>
+      <Title><![CDATA[喜帖3]]></Title>
+      <Description><![CDATA[亲们，我要结婚啦。祝福我吧]]></Description>
+      <PicUrl><![CDATA[http://localhost:820/upload/201403/03/201403031753136267.jpg]]></PicUrl>
+      <Url><![CDATA[http://localhost:820/weixin/xitie/index.aspx?wid=5&xid=3&token=1394276363&openid=dddd25&wxref=mp.weixin.qq.com]]></Url>
+    </item>
+  </Articles>
+  <FuncFlag>0</FuncFlag>
+</xml>

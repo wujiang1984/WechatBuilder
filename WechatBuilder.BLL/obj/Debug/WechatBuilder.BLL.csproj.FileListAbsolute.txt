@@ -1,0 +1,13 @@
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\obj\Debug\WechatBuilder.BLL.csprojResolveAssemblyReference.cache
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\bin\Debug\WechatBuilder.BLL.dll
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\bin\Debug\WechatBuilder.BLL.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\bin\Debug\WechatBuilder.Common.dll
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\bin\Debug\WechatBuilder.DAL.dll
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\bin\Debug\WechatBuilder.Model.dll
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\bin\Debug\WechatBuilder.DBUtility.dll
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\bin\Debug\WechatBuilder.Common.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\bin\Debug\WechatBuilder.DAL.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\bin\Debug\WechatBuilder.Model.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\bin\Debug\WechatBuilder.DBUtility.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\obj\Debug\WechatBuilder.BLL.dll
+E:\MySpace\WechatBuilder\WechatBuilder.BLL\obj\Debug\WechatBuilder.BLL.pdb

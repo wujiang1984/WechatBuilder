@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <ToUserName><![CDATA[dddd25]]></ToUserName>
+  <FromUserName><![CDATA[gh_161b0f5a4e27]]></FromUserName>
+  <CreateTime>1393863023</CreateTime>
+  <MsgType>music</MsgType>
+  <Music>
+    <Title><![CDATA[哈哈音乐]]></Title>
+    <Description><![CDATA[]]></Description>
+    <MusicUrl><![CDATA[http://www.baidu.com/22.mp3]]></MusicUrl>
+    <HQMusicUrl><![CDATA[]]></HQMusicUrl>
+  </Music>
+  <FuncFlag>0</FuncFlag>
+</xml>

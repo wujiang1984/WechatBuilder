@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <ToUserName><![CDATA[ddd]]></ToUserName>
+  <FromUserName><![CDATA[gh_161b0f5a4e27]]></FromUserName>
+  <CreateTime>1397368818</CreateTime>
+  <MsgType>text</MsgType>
+  <Content><![CDATA[已经成功上传点击查看<br/><a href="http://localhost:820/weixin/shangqiang/index.aspx?wid=5&aid=1">查看相册</a>照片id为16]]></Content>
+  <FuncFlag>0</FuncFlag>
+</xml>

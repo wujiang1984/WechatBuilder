@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <ToUserName><![CDATA[dddd25]]></ToUserName>
+  <FromUserName><![CDATA[gh_161b0f5a4e27]]></FromUserName>
+  <CreateTime>1394377163</CreateTime>
+  <MsgType>text</MsgType>
+  <Content><![CDATA[我是忽悠你的。]]></Content>
+  <FuncFlag>0</FuncFlag>
+</xml>

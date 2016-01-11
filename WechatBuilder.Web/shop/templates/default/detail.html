@@ -1,0 +1,178 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <title>{$model.productName}</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link href="/shop/templates/default/css/style.css" rel="stylesheet" />
+    <link href="/shop/templates/default/css/templates.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var basePath = "{$yuming}", baseParam = "";
+    </script>
+
+
+     
+
+    <style type="text/css">
+        .mod_fold .fold_detail img {
+            display: block;
+            width: 100%;
+        }
+
+        .mod_fold .maxheight {
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--_header-->
+    <vt:template id="header" file="_header.html" charset="utf-8" />
+<!--/_header-->	
+
+    <div class="lay_page page_detail current" id="page_detail">
+        <div class="lay_page_wrap">
+            <div class="mod_bg_lace"></div>
+            <div class="mod_slider">
+                <div class="slider_cnt">
+                    <ul id="detail-slider" style="visibility: hidden;">
+                        <vt:foreach from="$model.albums" item="albums" index="#.floor">
+                        <li>
+                            <img index="{$floor}" back_src="{$albums.original_path}" class="default" />
+
+                        </li>
+                        </vt:foreach>
+                    </ul>
+                </div>
+            </div>
+            <div class="fn_detail qb_gap qb_fs_l">
+                <h1 id="share-itemName">{$model.productName}</h1>
+                <div class="price">
+                    现价： <strong class="mod_color_strong" id="price">￥{$model.salePrice}</strong>
+
+                    <del class="mod_color_weak qb_fs_s" id="maketPrice">￥{$model.marketPrice}</del>
+
+                    <br>
+                </div>
+                <hr class="qb_hr" />
+                <div id="prop-list"></div>
+
+                <div id="J_buy">
+                    <dl class="mod_dl mod_lh_l qb_mb10 qb_clearfix">
+                        <dt>数量：</dt>
+                        <dd><span class="quantity"><span class="minus" tag="sub"><i class="qb_icon icon_minus"></i></span>
+                            <input type="tel" id="buyNum" value="1"><span tag="add" class="plus"><i class="qb_icon icon_plus"></i></span></span><span class="qb_fs_s mod_color_comment">&nbsp;<span id="stock-num-prev">不</span><span id="stock-num" style="display: none;">99</span><span id="stock-num-next">限</span></span></dd>
+                    </dl>
+                    <hr class="qb_hr" />
+                    <div class="qb_flex">
+                        <span class="mod_btn btn_block btn_em qb_mr10 flex_box" id="add-cart">加入购物车</span>
+                       <!-- <span class="mod_btn btn_block btn_strong  flex_box" id="buy-now">立即购买</span>-->
+                    </div>
+                </div>
+                <div id="J_buydisable" style="display: none;">
+                    <div class="btn_empty qb_tac mod_color_weak" id="J_nogoods">已经售完</div>
+                </div>
+                <hr class="qb_hr" />
+                <h2>商品详情</h2>
+                <div class="mod_fold fold">
+                    <div class="fold_detail qb_fs_m qb_mb10 mod_color_weak maxheight" id="detail-info">
+                        <div style="color: #404040; font-family: tahoma, arial, 宋体; background-color: #FFFFFF;">
+                            <p>
+                                <br />
+                            </p>
+                            <p style="color: #999999;">
+                                <span style="font-weight: 700 >
+                                    {$model.shortDesc}
+                                </span>
+                            </p>
+                            <p style="color: #999999;">
+                                <span style="font-weight: 700;">产品参数：</span>
+                            </p>
+                            <ul>
+                            <vt:foreach from="$model.attrs" item="attrs" index="#.floor">
+                                 <li style="vertical-align: top; color: #666666;">{$attrs.attrName}:&nbsp;{$attrs.paValue}
+                                </li>
+                            </vt:foreach>
+                                
+                            </ul>
+                            <p>
+                                <br />
+                            </p>
+                        </div>
+                        
+                       
+                        {$model.description}
+                    </div>
+                    <div class="fold_arrow qb_tac qb_mb10 qb_none" id="info-arrow">
+                        <div class="handle arrow"></div>
+                    </div>
+                </div>
+            </div>
+            <form action="/shop/confirmOrder.aspx" method="get" name="detailForm">
+
+                <input type="hidden" value="" id="bc" name="bc">
+                <input type="hidden" value="" id="attr" name="attr">
+                <input type="hidden" value="" id="mid" name="mid">
+                <input type="hidden" value="{$model.id}" id="ic" name="ic">
+              
+                <input type="hidden" value="{$model.salePrice}" id="totprice" name="totprice"  >
+                <input type="hidden" value="{$wid}" id="wid" name="wid">
+                <input type="hidden" value="{$openid}" id="openid" name="openid">
+            </form>
+        </div>
+    </div>
+    <div class="mod_dialog qb_none" id="message-notice">
+        <div class="dialog_mask"></div>
+        <div class="dialog_main qb_br qb_tac">
+            <div class="dialog_bd" id="notice-content"></div>
+            <div class="dialog_ft qb_flex"><a href="javascript:void(0);" class="flex_box" id="notice-cancel">取消</a>
+                <a href="javascript:void(0);" class="flex_box" id="notice-sure">确定</a></div>
+        </div>
+    </div>
+    <div class="qb_quick_tip qb_none" id="bubble"></div>
+    <script type="text/template" id="prop-tpl">
+        <dl class="mod_dl qb_mb10 mod_lh_l qb_clearfix">
+            <dt>{#pName#}：</dt>
+            <dd class="qb_color_weak mod_property" skuname="{#pName#}" index="{#index#}">{#pList#}</dd>
+        </dl>
+    </script>
+
+    <!--_bottom-->
+       <vt:template id="_bottom" file="_bottom.html" charset="utf-8" />
+    <!--/_bottom-->	
+
+    <!--_share_js-->
+       <vt:template id="share_js" file="_share_js.html" charset="utf-8" />
+    <!--/_share_js-->	
+
+    <script src="/shop/templates/default/js/zepto.min.js"></script>
+    <script src="/shop/templates/default/js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript">
+        var sku, availSku, totalStock, bookEndTime, bookBeginTime, isNew, wxInfo, picLinks, buymaxnum;
+        sku = {$skuStr};
+        availSku = {$availSkuStr};
+
+
+
+
+        totalStock = '9999',
+        isNew = "false";
+        wxInfo = { "isFocus": "true", "wxId": "ONLY_BESTSELLER" };
+
+        picLinks = "[]";
+
+        isNew = "false";
+        wxInfo = { "isFocus": "true", "wxId": "" };
+        buymaxnum = "50";
+        //picLinks = picLinks.replace(/(\s)+/g, "");
+
+        imagesLoaded(document.querySelector('#detail-info'), function (instance) {
+            mobile.o2ocn.detail.init();
+        });
+    </script>
+</body>
+</html>

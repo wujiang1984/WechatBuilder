@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <ToUserName><![CDATA[ddd]]></ToUserName>
+  <FromUserName><![CDATA[gh_161b0f5a4e27]]></FromUserName>
+  <CreateTime>1396967632</CreateTime>
+  <MsgType>news</MsgType>
+  <ArticleCount>1</ArticleCount>
+  <Articles>
+    <item>
+      <Title><![CDATA[刮刮卡活动开始了1]]></Title>
+      <Description><![CDATA[简介2222]]></Description>
+      <PicUrl><![CDATA[http://localhost:820/weixin/dzp/images/start.jpg]]></PicUrl>
+      <Url><![CDATA[http://localhost:820/weixin/dzp/index.aspx?wid=5&aid=1&token=1396967632&openid=ddd&wxref=mp.weixin.qq.com]]></Url>
+    </item>
+  </Articles>
+  <FuncFlag>0</FuncFlag>
+</xml>

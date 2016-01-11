@@ -1,0 +1,4 @@
+E:\MySpace\WechatBuilder\WechatBuilder.Common\bin\Debug\WechatBuilder.Common.dll
+E:\MySpace\WechatBuilder\WechatBuilder.Common\bin\Debug\WechatBuilder.Common.pdb
+E:\MySpace\WechatBuilder\WechatBuilder.Common\obj\Debug\WechatBuilder.Common.dll
+E:\MySpace\WechatBuilder\WechatBuilder.Common\obj\Debug\WechatBuilder.Common.pdb

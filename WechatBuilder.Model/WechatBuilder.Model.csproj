@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59E451EA-4E7A-408A-9F5C-36F2AC8D90AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WechatBuilder.Model</RootNamespace>
+    <AssemblyName>WechatBuilder.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="article.cs" />
+    <Compile Include="article_albums.cs" />
+    <Compile Include="article_attach.cs" />
+    <Compile Include="article_attribute_field.cs" />
+    <Compile Include="article_category.cs" />
+    <Compile Include="article_comment.cs" />
+    <Compile Include="article_images_size.cs" />
+    <Compile Include="channel.cs" />
+    <Compile Include="channel_category.cs" />
+    <Compile Include="channel_field.cs" />
+    <Compile Include="express.cs" />
+    <Compile Include="mail_template.cs" />
+    <Compile Include="manager.cs" />
+    <Compile Include="manager_log.cs" />
+    <Compile Include="manager_role.cs" />
+    <Compile Include="manager_role_value.cs" />
+    <Compile Include="navigation.cs" />
+    <Compile Include="plugs\wx_cards.cs" />
+    <Compile Include="plugs\wx_cards_gl.cs" />
+    <Compile Include="plugs\wx_diancai_blacklist.cs" />
+    <Compile Include="plugs\wx_diancai_caipin_category.cs" />
+    <Compile Include="plugs\wx_diancai_caipin_manage.cs" />
+    <Compile Include="plugs\wx_diancai_desknum.cs" />
+    <Compile Include="plugs\wx_diancai_dianyuan.cs" />
+    <Compile Include="plugs\wx_diancai_dingdan_caiping.cs" />
+    <Compile Include="plugs\wx_diancai_dingdan_manage.cs" />
+    <Compile Include="plugs\wx_diancai_form_control.cs" />
+    <Compile Include="plugs\wx_diancai_form_result.cs" />
+    <Compile Include="plugs\wx_diancai_member.cs" />
+    <Compile Include="plugs\wx_diancai_shopinfo.cs" />
+    <Compile Include="plugs\wx_diancai_shoppic.cs" />
+    <Compile Include="plugs\wx_diancai_shop_advertisement.cs" />
+    <Compile Include="plugs\wx_diancai_shop_setup.cs" />
+    <Compile Include="plugs\wx_sjb_bisai.cs" />
+    <Compile Include="plugs\wx_sjb_jcDetail.cs" />
+    <Compile Include="plugs\wx_sjb_qiudui.cs" />
+    <Compile Include="plugs\wx_sjb_richeng.cs" />
+    <Compile Include="plugs\wx_sjb_users.cs" />
+    <Compile Include="shop\orders.cs" />
+    <Compile Include="order_config.cs" />
+    <Compile Include="order_goods.cs" />
+    <Compile Include="plugs\wx_albums_type.cs" />
+    <Compile Include="plugs\wx_message_blacklist.cs" />
+    <Compile Include="plugs\wx_message_list.cs" />
+    <Compile Include="plugs\wx_message_setting.cs" />
+    <Compile Include="plugs\wx_product.cs" />
+    <Compile Include="plugs\wx_product_comment.cs" />
+    <Compile Include="plugs\wx_product_sys.cs" />
+    <Compile Include="plugs\wx_product_type.cs" />
+    <Compile Include="plugs\wx_purchase_base.cs" />
+    <Compile Include="plugs\wx_purchase_customer.cs" />
+    <Compile Include="plugs\wx_sq_act.cs" />
+    <Compile Include="plugs\wx_sq_heimd.cs" />
+    <Compile Include="plugs\wx_sq_piclist.cs" />
+    <Compile Include="plugs\wx_vote_base.cs" />
+    <Compile Include="plugs\wx_vote_item.cs" />
+    <Compile Include="plugs\wx_vote_result.cs" />
+    <Compile Include="shop\cartProduct.cs" />
+    <Compile Include="shop\payment.cs" />
+    <Compile Include="plugin.cs" />
+    <Compile Include="plugs\wx_albums_info.cs" />
+    <Compile Include="plugs\wx_albums_photo.cs" />
+    <Compile Include="plugs\wx_albums_sys.cs" />
+    <Compile Include="plugs\wx_dzpActionInfo.cs" />
+    <Compile Include="plugs\wx_dzpAwardItem.cs" />
+    <Compile Include="plugs\wx_dzpAwardUser.cs" />
+    <Compile Include="plugs\wx_dzpUsersTemp.cs" />
+    <Compile Include="plugs\wx_ggkActionInfo.cs" />
+    <Compile Include="plugs\wx_ggkAwardItem.cs" />
+    <Compile Include="plugs\wx_ggkAwardUser.cs" />
+    <Compile Include="plugs\wx_ggkUsersTemp.cs" />
+    <Compile Include="plugs\wx_pano_jd.cs" />
+    <Compile Include="plugs\wx_pano_sys.cs" />
+    <Compile Include="plugs\wx_sTicket.cs" />
+    <Compile Include="plugs\wx_sttAwardItem.cs" />
+    <Compile Include="plugs\wx_sttAwardUser.cs" />
+    <Compile Include="plugs\wx_xt_base.cs" />
+    <Compile Include="plugs\wx_xt_photo.cs" />
+    <Compile Include="plugs\wx_xt_user.cs" />
+    <Compile Include="plugs\wx_xt_zhufu.cs" />
+    <Compile Include="plugs\wx_yy_base.cs" />
+    <Compile Include="plugs\wx_yy_control.cs" />
+    <Compile Include="plugs\wx_yy_result.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="shopping_cart.cs" />
+    <Compile Include="shop\ShopSKU.cs" />
+    <Compile Include="shop\wx_module_templates.cs" />
+    <Compile Include="shop\wx_module_templates_wcode.cs" />
+    <Compile Include="shop\wx_payment_alipay.cs" />
+    <Compile Include="shop\wx_payment_type.cs" />
+    <Compile Include="shop\wx_payment_wxpay.cs" />
+    <Compile Include="shop\wx_shop_albums.cs" />
+    <Compile Include="shop\wx_shop_brand.cs" />
+    <Compile Include="shop\wx_shop_cart.cs" />
+    <Compile Include="shop\wx_shop_catalog.cs" />
+    <Compile Include="shop\wx_shop_catalog_attribute.cs" />
+    <Compile Include="shop\wx_shop_category.cs" />
+    <Compile Include="shop\wx_shop_category_catalog.cs" />
+    <Compile Include="shop\wx_shop_product.cs" />
+    <Compile Include="shop\wx_shop_productAttr_value.cs" />
+    <Compile Include="shop\wx_shop_setting.cs" />
+    <Compile Include="shop\wx_shop_sku.cs" />
+    <Compile Include="shop\wx_shop_user_addr.cs" />
+    <Compile Include="sms_template.cs" />
+    <Compile Include="sys_config.cs" />
+    <Compile Include="template.cs" />
+    <Compile Include="ucard\wx_ucard_adver.cs" />
+    <Compile Include="ucard\wx_ucard_cardinfo.cs" />
+    <Compile Include="ucard\wx_ucard_gift.cs" />
+    <Compile Include="ucard\wx_ucard_notice.cs" />
+    <Compile Include="ucard\wx_ucard_privileges.cs" />
+    <Compile Include="ucard\wx_ucard_score.cs" />
+    <Compile Include="ucard\wx_ucard_store.cs" />
+    <Compile Include="ucard\wx_ucard_store_fendian.cs" />
+    <Compile Include="ucard\wx_ucard_sys.cs" />
+    <Compile Include="ucard\wx_ucard_ticket.cs" />
+    <Compile Include="ucard\wx_ucard_udegree.cs" />
+    <Compile Include="ucard\wx_ucard_usercard.cs" />
+    <Compile Include="ucard\wx_ucard_users.cs" />
+    <Compile Include="ucard\wx_ucard_users_consumeinfo.cs" />
+    <Compile Include="url_rewrite.cs" />
+    <Compile Include="users.cs" />
+    <Compile Include="user_amount_log.cs" />
+    <Compile Include="user_code.cs" />
+    <Compile Include="user_config.cs" />
+    <Compile Include="user_groups.cs" />
+    <Compile Include="user_group_price.cs" />
+    <Compile Include="user_login_log.cs" />
+    <Compile Include="user_message.cs" />
+    <Compile Include="user_oauth.cs" />
+    <Compile Include="user_oauth_app.cs" />
+    <Compile Include="user_point_log.cs" />
+    <Compile Include="weixin\pre_common_district.cs" />
+    <Compile Include="weixin\ResponseContentEntity.cs" />
+    <Compile Include="weixin\wxcodeconfig.cs" />
+    <Compile Include="weixin\wx_lbs_setting.cs" />
+    <Compile Include="weixin\wx_lbs_shopInfo.cs" />
+    <Compile Include="weixin\wx_link_module.cs" />
+    <Compile Include="weixin\wx_logs.cs" />
+    <Compile Include="weixin\wx_PicStore.cs" />
+    <Compile Include="weixin\wx_property_info.cs" />
+    <Compile Include="weixin\wx_requestRule.cs" />
+    <Compile Include="weixin\wx_requestRuleContent.cs" />
+    <Compile Include="weixin\wx_requst_BaseData.cs" />
+    <Compile Include="weixin\wx_response_BaseData.cs" />
+    <Compile Include="weixin\wx_small_link.cs" />
+    <Compile Include="weixin\wx_sms_config.cs" />
+    <Compile Include="weixin\wx_sms_info.cs" />
+    <Compile Include="weixin\wx_sysConfig.cs" />
+    <Compile Include="weixin\wx_templates.cs" />
+    <Compile Include="weixin\wx_templates_wcode.cs" />
+    <Compile Include="weixin\wx_userweixin.cs" />
+    <Compile Include="weixin\wx_wsite_modulebase.cs" />
+    <Compile Include="weixin\wx_wsite_setting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WechatBuilder.Common\WechatBuilder.Common.csproj">
+      <Project>{20908989-7773-493B-B1BD-764BE322A935}</Project>
+      <Name>WechatBuilder.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
