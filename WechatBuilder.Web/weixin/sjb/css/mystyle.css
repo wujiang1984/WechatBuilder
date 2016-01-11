@@ -1,0 +1,93 @@
+body {
+
+    width:320px;
+    margin:0 auto;
+
+}
+.jc_header {
+font-size:20px;
+font-weight:bolder;
+line-height:50px;
+text-align:center;
+border-bottom:1px solid rgba(0,0,0,.5);
+ 
+
+}
+    .jc_header a {
+    font-size:12px;
+    font-weight:normal;
+    line-height:30px;
+    display:block;
+    
+    }
+.jc_clear {
+clear:both;
+}
+.jc_content {
+width:100%;
+  padding-top:20px;
+}
+.jc_main div {
+    float:left;
+    padding-bottom:3%;
+   
+
+}
+.jc_main .jc_qiudui {
+width:30%;
+ padding-left:8%;
+
+}
+.jc_vs {
+width:18%;
+font-size:22px;
+line-height:70px;
+letter-spacing:5px;
+font-weight:bolder;
+vertical-align:middle;
+text-align:center;
+
+}
+.jc_wenzi {
+width:100%;
+font-weight:bold;
+ 
+}
+.jc_qiudui img {
+display:block;
+width:80%;
+}
+
+.jc_form {
+    padding-top:1%;
+background-color:#fff;
+height:34px;
+padding-left:4%;
+padding-right:4%;
+}
+.jc_form div
+{
+    float:left;
+    margin-top:3px;  
+}
+.jc_form .divbtn
+{
+    float:right;  
+    margin-top:0px;  
+    margin-right:20px;
+}
+.btnJs {
+    width:60px;
+color: #FFF;
+font-size: 14px;
+text-align: center;
+height: 30px;
+line-height: 20px;
+text-shadow: 0 -1px 1px rgba(0,0,0,.5);
+border-radius: 3px;
+background-color: #25b025;
+background-image: -webkit-gradient(linear,left top,left bottom,from(#39d139),to(#25b025));
+background-image: -webkit-linear-gradient(top,#39d139,#25b025);
+background-image: linear-gradient(to bottom,#39d139,#25b025);
+
+}

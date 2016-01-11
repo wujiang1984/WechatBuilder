@@ -1,0 +1,255 @@
+﻿<style type="text/css">
+    body {
+        margin-bottom: 60px !important;
+    }
+
+    ul, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #plug-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        z-index: 800;
+    }
+
+    .top_bar {
+        position: fixed;
+        bottom: 0;
+        left: 0px;
+        z-index: 900;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        font-family: Helvetica, Tahoma, Arial, Microsoft YaHei, sans-serif;
+    }
+
+    .plug-menu {
+        -webkit-appearance: button;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 36px;
+        position: absolute;
+        bottom: 17px;
+        left: 17px;
+        z-index: 999;
+        box-shadow: 0 0 0 4px #FFFFFF, 0 2px 5px 4px rgba(0, 0, 0, 0.25);
+        background-color: #B70000;
+        -webkit-transition: -webkit-transform 200ms;
+        -webkit-transform: rotate(1deg);
+        color: #fff;
+        background-image: url(/templatesstore/images/shizijia.png);
+        background-repeat: no-repeat;
+        -webkit-background-size: 80% auto;
+        background-size: 80% auto;
+        background-position: center center;
+    }
+
+        .plug-menu:before {
+            font-size: 20px;
+            margin: 9px 0 0 9px;
+        }
+
+        .plug-menu:checked {
+            -webkit-transform: rotate(135deg);
+        }
+
+    .top_menu {
+        margin-left: -175px;
+    }
+
+        .top_menu > li {
+            min-width: 86px;
+            padding: 0 10px;
+            height: 32px;
+            border-radius: 32px;
+            box-shadow: 0 0 0 3px #FFFFFF, 0 2px 5px 3px rgba(0, 0, 0, 0.25);
+            background: #B70000;
+            margin-bottom: 23px;
+            margin-left: 23px;
+            z-index: 900;
+            transition: all 200ms ease-out;
+            -webkit-transition: all 200ms ease-out;
+        }
+
+            .top_menu > li:last-child {
+                margin-bottom: 80px;
+            }
+
+            .top_menu > li a {
+                color: #fff;
+                font-size: 20px;
+                display: block;
+                height: 100%;
+                line-height: 33px;
+                text-indent: 26px;
+                text-decoration: none;
+                position: relative;
+                font-size: 16px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+                .top_menu > li a img {
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    text-indent: -999px;
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    margin-top: -13px;
+                    margin-left: -12px;
+                }
+
+            .top_menu > li.on:nth-of-type(1) {
+                -webkit-transform: translate(175px, 0) rotate(0deg);
+                transition: all 700ms ease-out;
+                -webkit-transition: all 700ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.on:nth-of-type(2) {
+                -webkit-transform: translate(175px, 0) rotate(0deg);
+                transition: all 600ms ease-out;
+                -webkit-transition: all 600ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.on:nth-of-type(3) {
+                -webkit-transform: translate(175px, 0) rotate(0deg);
+                transition: all 500ms ease-out;
+                -webkit-transition: all 500ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.on:nth-of-type(4) {
+                -webkit-transform: translate(175px, 0) rotate(0deg);
+                transition: all 400ms ease-out;
+                -webkit-transition: all 400ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.on:nth-of-type(5) {
+                -webkit-transform: translate(175px, 0) rotate(0deg);
+                transition: all 300ms ease-out;
+                -webkit-transition: all 300ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.on:nth-of-type(6) {
+                -webkit-transform: translate(175px, 0) rotate(0deg);
+                transition: all 200ms ease-out;
+                -webkit-transition: all 200ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.out:nth-of-type(1) {
+                -webkit-transform: translate(-20px, 0) rotate(0deg);
+                transition: all 600ms ease-out;
+                -webkit-transition: all 600ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.out:nth-of-type(2) {
+                -webkit-transform: translate(-20px, 0) rotate(0deg);
+                transition: all 500ms ease-out;
+                -webkit-transition: all 500ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.out:nth-of-type(3) {
+                -webkit-transform: translate(-20px, 0) rotate(0deg);
+                transition: all 400ms ease-out;
+                -webkit-transition: all 400ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.out:nth-of-type(4) {
+                -webkit-transform: translate(-20px, 0) rotate(0deg);
+                transition: all 300ms ease-out;
+                -webkit-transition: all 300ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.out:nth-of-type(5) {
+                -webkit-transform: translate(-20px, 0) rotate(0deg);
+                transition: all 200ms ease-out;
+                -webkit-transition: all 200ms ease-out;
+                width: 130px;
+            }
+
+            .top_menu > li.out:nth-of-type(6) {
+                -webkit-transform: translate(-20px, 0) rotate(0deg);
+                transition: all 100ms ease-out;
+                -webkit-transition: all 100ms ease-out;
+                width: 130px;
+            }
+
+    #sharemcover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        z-index: 20000;
+    }
+
+        #sharemcover img {
+            position: fixed;
+            right: 18px;
+            top: 5px;
+            width: 260px;
+            height: 180px;
+            z-index: 20001;
+            border: 0;
+        }
+</style>
+
+
+<div class="top_bar" style="-webkit-transform: translate3d(0,0,0)">
+    <nav>
+        <ul id="top_menu" class="top_menu">
+            <input type="checkbox" id="plug-btn" class="plug-menu themeStyle">
+
+              <vt:function var="bottom" method="getBottomMenu" type="$this" classlayer="1" />
+             <vt:foreach from="$bottom" item="b" index="floor">
+            <li class="themeStyle out">
+                    <a  href="{$b.link_url}">
+                <img src="{$b.ico_url}">
+                    <label>{$b.title}</label>
+                </a>
+
+            </li>
+              </vt:foreach>
+        </ul>
+    </nav>
+</div>
+<div id="plug-wrap" style="display: none;"></div>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+        btn = document.getElementById("plug-btn");
+        btn.onclick = function () {
+            var divs = document.getElementById("top_menu").querySelectorAll("li");
+            var className = className = this.checked ? "themeStyle on" : "themeStyle out";
+            for (i = 0; i < divs.length; i++) {
+                divs[i].className = className;
+            }
+            document.getElementById("plug-wrap").style.display = "themeStyle on" == className ? "" : "none";
+        }
+
+        btn2 = document.getElementById("plug-wrap");
+        btn2.onclick = function () {
+            btn.click();
+        }
+    }, false);
+</script>
