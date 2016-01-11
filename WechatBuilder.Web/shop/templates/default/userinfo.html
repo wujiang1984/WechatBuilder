@@ -1,0 +1,250 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <title>会员中心</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link href="/shop/templates/default/css/style.css" rel="stylesheet" />
+    <link href="/shop/templates/default/css/templates.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var basePath = "{$yuming}", baseParam = "openid={$openid}&wid={$wid}";
+    </script>
+
+</head>
+<body>
+
+    <!--_header-->
+    <vt:template id="header" file="_header.html" charset="utf-8" />
+    <!--/_header-->
+    <input type="hidden" value="{$wid}" id="hidwid" name="hidwid">
+    <input type="hidden" value="{$openid}" id="openid" name="openid">
+    <div class="lay_page page_icenter" id="page_icenter">
+        <div class="lay_page_wrap">
+            <div class="fn_profile qb_clearfix">
+                <div class="qb_fl w200">
+                    <h2 class="profile_name"></h2>
+                    <a href="/my/info.html" title="修改呢称" style="display: none;"><i class="qb_icon icon_pen"></i></a>
+                    <div class="profile_detail" style="display: none;"><a class="profile_location" href="/my/recvaddr/list.html"><i class="qb_icon icon_profile_location"></i>收货地址管理</a></div>
+                </div>
+
+            </div>
+            <div class="fn_tab qb_flex mod_mb15" id="tab-list">
+                <div index="1" class="flex_box">待付款<span class="mod_color_strong">{$dfk_num}</span></div>
+                <div index="2" class="flex_box">待收货<span class="mod_color_strong">{$dsh_num}</span></div>
+                <div index="3" class="flex_box">已结束<span class="mod_color_strong">{$yjs_num}</span></div>
+            </div>
+            <div id="itemList">
+                <div class="qb_tac mod_color_weak qb_p10">订单加载中...</div>
+            </div>
+            <div class="qb_tac" style="height: 30px;" evttag="loadMore" id="load-more"></div>
+        </div>
+    </div>
+    <div class="qb_quick_tip qb_none" id="bubble"></div>
+
+    <!--_bottom-->
+    <vt:template id="_bottom" file="_bottom.html" charset="utf-8" />
+    <!--/_bottom-->
+    <script type="text/template" id="item-tpl">
+        <li class="{#singleLi#}">
+            <img src="{#pic#}" class="{#imgClass#}" width="80" height="80">
+            <div class="bfc_c {#singleShow#}">
+                <p>{#itemName#}</p>
+                {#attr#}
+            </div>
+        </li>
+    </script>
+    <script type="text/template" id="container-tpl">
+        <div class="mod_cell qb_mb15">
+            <div class="mod_celltitle">
+                <h3 class="qb_fl">订单编号：{#no#}</h3>
+                <i class="qb_fr qb_icon icon_arrow_right"></i>
+            </div>
+            <a href="javascript:;" onclick="view_order(this)" data-orderid="{#id#}">
+                <div class="mod_slider">
+                    <div class="slider_cnt">
+                        <ul>{#itemPicList#}</ul>
+                    </div>
+                </div>
+            </a>
+            <div class="mod_cell_hr"></div>
+            <div class="qb_clearfix qb_fs_s qb_mb10 mod_color_weak">
+                <div class="qb_fl">{#stateName#}</div>
+                <div class="qb_fr">共计{#totalCount#}件商品 总价:<span class="mod_color_strong">&yen;{#totalPay#}</span></div>
+            </div>
+            <div class="qb_flex qb_mb10 {#pay_show#}" style="display:{#pay_show1#};">
+                <div class="mod_select select_block flex_box btn_strong">
+                    <select evttag="changePay" dc="{#id#}">
+                        <option value="-1">去付款</option>
+
+                        <option value="0" pid="6852">微信支付</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="qb_flex qb_mb10 {#receive_show#}">
+                <a onclick="view_log(this)" data-orderid="{#id#}" class="mod_btn btn_block qb_mr10 flex_box view_log">查看物流</a>
+                <span evttag="confirmRecv" url="/shop/shopmgr.ashx?myact=shouhuo" dc="{#id#}" class="mod_btn btn_block btn_em flex_box">确认收货</span>
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="drawback-tpl">
+        <div class="qb_gap" id="{#nodeId#}">
+            <div class="mod_tips mod_tips_gray arrow_down qb_fs_s" evttag="showDrawList">
+                等待退款中(<span class="mod_color_strong">0</span>)
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="booknew-tpl">
+        <div class="qb_gap">
+            <div class="mod_tips mod_tips_gray arrow_down qb_fs_s" evttag="showBookList">
+                新款预订(<span class="mod_color_strong">0</span>)
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="none-tpl">
+        <div class="mod_color_weak mod_nocontent qb_fs_s" style="height: {#height#}px;">
+            <p>没有{#text#}订单</p>
+            <p><a href='{$indexurl}'>返回首页</a></p>
+        </div>
+    </script>
+
+
+
+    <form id="form1" name="form1" method="post">
+        <input name="order_id" id="order_id" type="hidden" />
+    </form>
+    <script src="/shop/templates/default/js/zepto.min.js"></script>
+    <script type="text/javascript">
+        var dealData = {
+            //待收货
+            "waitRecvData": { 
+                "totalNum": "{$dsh_num}",
+                "dealList": [
+                    <vt:foreach from="$o_dsh" item="o" index="i">
+                    <vt:if var="#.i.isend" value="true">
+                         {
+                             "no":"{$o.order_no}", "id": "{$o.id}",  "dt": "{$o.real_amount call='ComputeMoney'}", "ds": "62", "il":
+                                 [
+                                 <vt:foreach from="$o.order_product" item="g" index="j">
+                                     <vt:if var="#.j.isend" value="true">
+                                          { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" }
+                                      <vt:else>
+                                               { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" },
+                                </vt:if>
+                                 </vt:foreach> 
+        ], "pt": "1", "sc": "{$o.status}" }
+                      <vt:else>
+                     {
+                         "no":"{$o.order_no}", "id": "{$o.id}",  "dt": "{$o.real_amount call='ComputeMoney'}", "ds": "62", "il":
+                             [
+                             <vt:foreach from="$o.order_product" item="g" index="j">
+                                 <vt:if var="#.j.isend" value="true">
+                                      { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" }
+                                      <vt:else>
+                                           { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" },
+                            </vt:if>
+                                     
+                             </vt:foreach> 
+        ], "pt": "1", "sc": "{$o.status}"  }  ,
+                     </vt:if>
+                    </vt:foreach>
+        ]
+            },
+            "drawback": { "totalNum": 0, "dealList": [] },
+            "waitPayData": {  //待付款
+                "totalNum": "{$dfk_num}",
+                "dealList": [
+                    <vt:foreach from="$o_dfu" item="o" index="i">
+                    <vt:if var="#.i.isend" value="true">
+                         {
+                             "no":"{$o.order_no}", "id": "{$o.id}", "dt": "{$o.order_amount call='ComputeMoney'}", "ds": "60", "il":
+                                 [
+                                 <vt:foreach from="$o.order_product" item="g" index="j">
+                                     <vt:if var="#.j.isend" value="true">
+                                          { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" }
+                                      <vt:else>
+                                               { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" },
+                                </vt:if>
+                                 </vt:foreach> 
+            ], "pt": "1", "sc": "{$o.status}" }
+                      <vt:else>
+                     {
+                         "no":"{$o.order_no}", "id": "{$o.id}",  "dt": "{$o.order_amount call='ComputeMoney'}", "ds": "60", "il":
+                             [
+                             <vt:foreach from="$o.order_product" item="g" index="j">
+                                 <vt:if var="#.j.isend" value="true">
+                                      { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" }
+                                      <vt:else>
+                                           { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" },
+                            </vt:if>
+                                     
+                             </vt:foreach> 
+                     ], "pt": "1", "sc": "{$o.status}"  }  ,
+                     </vt:if>
+                    </vt:foreach>
+                     ]
+            },
+        //已结束
+            "end": { 
+                "totalNum": "{$yjs_num}",
+               "dealList": [
+                   <vt:foreach from="$o_yjs" item="o" index="i">
+                   <vt:if var="#.i.isend" value="true">
+                        {
+                            "no":"{$o.order_no}", "id": "{$o.id}","pay_show1":"none;",  "dt": "{$o.order_amount call='ComputeMoney'}", "ds": "60", "il":
+                                [
+                                <vt:foreach from="$o.order_product" item="g" index="j">
+                                    <vt:if var="#.j.isend" value="true">
+                                         { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" }
+                                     <vt:else>
+                                              { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" },
+                               </vt:if>
+                                </vt:foreach> 
+            ], "pt": "1", "sc": "{$o.status}" }
+            <vt:else>
+            {
+                "no":"{$o.order_no}", "id": "{$o.id}", "pay_show1":"none;", "dt": "{$o.order_amount call='ComputeMoney'}", "ds": "60", "il":
+                [
+                <vt:foreach from="$o.order_product" item="g" index="j">
+                    <vt:if var="#.j.isend" value="true">
+                         { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" }
+                         <vt:else>
+                              { "sn": "{$g.sku}", "mid": "{$g.id}", "name": "{$g.productName}", "pic": "{$g.focusImgUrl}", "din": "{$g.stock}" },
+               </vt:if>
+                                     
+                </vt:foreach> 
+            ], "pt": "1", "sc": "{$o.status}"  }  ,
+            </vt:if>
+           </vt:foreach>
+        ]
+
+            },
+            "errCode": "0", "newItems": { "totalNum": 0, "dealList": [] }
+        };
+
+        mobile.o2ocn.myorder.init();
+        function view_log(e) {
+            var orderid = $(e).data("orderid");
+            //$("#order_id").val(orderid);
+            //document.form1.action = "/cmd/logistics.html?" + window.baseParam;
+            //document.form1.submit();
+            //window.location+orderid;
+        }
+        function view_order(e) {
+            var orderid = $(e).data("orderid");
+            window.location = "/shop/order_detail.aspx?orderid=" + orderid + "&" + window.baseParam;
+        }
+        //function confirmRecv(e) {
+        //    var orderid= $(e).data("orderid"); 
+        //    $("#order_id").val(orderid);
+        //    document.form1.action="/plus/action/receipt/ok?"+window.baseParam;
+        //    document.form1.submit();
+        //}
+    </script>
+</body>
+</html>

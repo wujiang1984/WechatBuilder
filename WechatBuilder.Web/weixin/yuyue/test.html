@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>友谊摄影
+    </title>
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+     <link href="css/fans.css" rel="stylesheet" type="text/css" />
+
+    <link href="../../scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../scripts/bootstrap/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="../../scripts/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../../scripts/jquery/jquery.query.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../scripts/jquery/alert.js"></script>
+
+
+     <script type="text/javascript" src="../../scripts/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../scripts/bootstrap/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+     <script type="text/javascript" src="../../scripts/bootstrap/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+   
+     <style type="text/css">
+        .InputType {
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            background-color: #FFFFFF;
+            border: 1px solid #E8E8E8;
+            margin: 5px 0 4px;
+            padding: 5px 10px;
+            line-height: 28px;
+            padding-left: 50px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body id="news">
+    <form name="form1" method="post" action="index.aspx?wid=5&amp;id=7&amp;openid=ddd" id="form1">
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTk2MzU1NDI0M2Rkn6yQ6DK0yBFMWf++xnph3ZGqw9oFIIHIhsbKG3jPhwE=" />
+        </div>
+
+
+        <ul class="round">
+            <li class="addr"><span>短发速度快</span></li>
+            <li class="tel"><a href="tel:13816330315"><span>13816330315 电话</span> </a></li>
+        </ul>
+
+        <div class="cardexplain">
+            <ul class="round">
+                <li class="title mb"><span class="none">预约采购</span></li>
+                <li class="nob">
+                    <div class="beizhu">
+                        请认真填写！
+                    </div>
+                </li>
+                <li class="nob">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+                        <tr>
+                            <th>姓名</th>
+                            <td>
+                                <input name="control_74" class="px" id="control_74" value="" type="text" placeholder="请输入姓名">
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+
+                <li class="nob">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+                        <tr>
+                            <th>手机</th>
+                            <td>
+                                <input name="control_73" class="px" id="control_73" value="" type="text" placeholder="请输入手机">
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+
+                <li class="nob">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+                        <tr>
+                            <th>预约时间</th>
+                            <td>
+                                <input name="control_75" class="px datetimepicker" id="control_75" value="" type="text" placeholder="请输入预约时间">
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+
+                <li class="nob">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+                        <tr>
+                            <th>英文名字</th>
+                            <td>
+                                <input name="control_76" class="px" id="control_76" value="" type="text" placeholder="请输入英文名字">
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+
+
+
+
+
+            </ul>
+            <div class="footReturn">
+                <a id="showcard" class="submit" href="javascript:void(0)">提 交</a>
+                <div class="window" id="windowcenter">
+                    <div id="title" class="wtitle">
+                        保存成功<span class="close" id="alertclose"></span>
+                    </div>
+                    <div class="content">
+                        <div id="txt">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#showcard").click(function () {
+                    if ($("#control_73").val() == '') { alert('手机不能为空'); return; }
+                    var submitData = {
+                        wid: '5',
+                        openid: 'ddd',
+                        formid: 7,
+                        control_74: $("#control_74").val(),
+                        control_73: $("#control_73").val(),
+                        control_75: $("#control_75").val(),
+                        control_76: $("#control_76").val()
+                    };
+                    $.post('yuyueApi.ashx', submitData, function (data) {
+                        if (data.success == "true") {
+                            alert("信息已经提交！请耐心等待！");
+                            setTimeout("window.location.reload()", 2000); return;
+                        }
+                        else { alert(data.msg || "保存失败"); }
+                    }, "json");
+                    oLay.style.display = "block";
+                });
+
+                $('.datetimepicker').datetimepicker({
+                    minView: "month", //选择日期后，不会再跳转去选择时分秒 
+                    format: "yyyy-mm-dd", //选择日期后，文本框显示的日期格式 
+                    language: 'zh-CN', //汉化 
+                    autoclose: true //选择日期后自动关闭 
+                });
+                 
+            });
+        </script>
+
+    </form>
+</body>
+
+</html>

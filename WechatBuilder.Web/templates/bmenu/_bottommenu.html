@@ -1,0 +1,40 @@
+<div id="sharemcover" onclick="document.getElementById('sharemcover').style.display='';" style="display: none">
+    <img src="/templatesstore/images/MgnnofmleM.png">
+</div>
+<script type="text/javascript" src="/templatesstore/js/bottommenu.js"></script>
+<div class="top_bar" style="-webkit-transform: translate3d(0,0,0)">
+    <nav>
+    <ul id="top_menu" class="top_menu">
+
+    <vt:function var="bottom" method="getBottomMenu" type="$this" classlayer="1" />
+    <vt:foreach from="$bottom" item="b" index="floor">
+        
+        <vt:if var="floor" value="3" compare="==">
+            <li class="home"><a href="/index.aspx?wid={$wid}&openid={$openid}"></a></li>
+        </vt:if>
+        <li>
+        <vt:if var="b.link_url" value="" compare="==">
+            <a onclick="javascript:displayit('menu_list{$floor}')">
+        <vt:else> 
+            <a  href="{$b.link_url}">
+        </vt:if>
+        <img src="{$b.ico_url}"><label>{$b.title}</label></a>
+        <ul id="menu_list{$floor}" class="menu_font menuUl" style="display: none;">
+           
+            <vt:function var="sonbottom" method="getBottomMenu" type="$this" classlayer="2" parentid="$b.id" />
+                <vt:foreach from="$sonbottom" item="s" index="sfloor">
+            <li>
+              <a href="{$s.link_url}">
+              <img src="{$s.ico_url}"><label>{$s.title}</label></a>            
+            </li>
+            </vt:foreach>
+            </ul>
+        </li>
+        </vt:foreach>
+
+        </ul>
+    </nav>
+</div>
+<div id="plug-wrap" onclick="closeall()" style="display: none;"></div>
+<link href="/templatesstore/css/bottommenu.css" rel="stylesheet" type="text/css" />
+

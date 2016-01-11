@@ -1,0 +1,124 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+   
+    <link rel="stylesheet" type="text/css" href="/templates/index/husha/css/muxue-ui-1-1.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/templates/index/husha/css/common.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/templates/index/husha/css/home-0.css" media="all" />
+
+    <script type="text/javascript" src="/templates/index/husha/js/jQuery.js"></script>
+    <script type="text/javascript" src="/templates/index/husha/js/swipe.js"></script>
+     <link href="/templatesstore/css/cate1_6.css" rel="stylesheet" type="text/css" />
+
+    <title>{$config.sitename}</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="Keywords" content="XX公司、微信营销、微信代运营、微信定制开发、微信托管、微网站、微商城、微营销" />
+    <meta name="Description" content="XX公司，国内最大的微信公众智能服务平台，XX公司八大微体系：微菜单、微官网、微会员、微活动、微商城、微推送、微服务、微统计，企业微营销必备。" />
+    <!-- Mobile Devices Support @begin -->
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Mobile Devices Support @end -->
+</head>
+<body onselectstart="return true;" ondragstart="return false;">
+
+    <div class="weimob-page" style="display: block; padding-bottom: 55px;">
+
+        <!--
+	幻灯片管理
+	-->
+        <div style="-webkit-transform: translate3d(0,0,0);">
+            <div id="banner_box" class="box_swipe">
+                <ul>
+                      <vt:function var="hdp" method="getHdp" type="$this"/>
+                    
+                    <vt:foreach from="$hdp" item="p" index="i">
+                        
+                         <li>
+                        <a href="{$p.link_url}">
+                            <img alt="lb1" src="{$p.img_url}" style="width: 100%;" />
+                        </a>
+                    </li>
+
+                           </vt:foreach>   
+        
+                </ul>
+                <ol>
+               <vt:foreach from="$hdp" item="p" index="i">
+                  <vt:if var="#.i.isfirst" value="true">
+                     <li class="on"></li>
+                  <vt:else>
+                         <li> </li>
+                  </vt:if>
+             </vt:foreach>
+                </ol>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                new Swipe(document.getElementById('banner_box'), {
+                    speed: 500,
+                    auto: 3000,
+                    callback: function () {
+                        var lis = $(this.element).next("ol").children();
+                        lis.removeClass("on").eq(this.index).addClass("on");
+                    }
+                });
+            });
+        </script>
+        
+        <!--
+		用户分类管理
+        -->
+        <div class="weimob-content">
+            <div class="weimob-list">
+
+                  <vt:function var="category" method="getCategory" type="$this" classlayer="1"  />
+    <vt:foreach from="$category" item="c" index="i">
+       
+           <a href="{$c.link_url}" class="weimob-list-item">
+                   
+              
+                    <div class="weimob-list-item-bg">
+                        <div>
+                            <img src="{$c.ico_url}" alt="{$c.title}" style="width: 100%;" />
+                        </div>
+                        <div class="weimob-list-item-box">
+                            <div class="weimob-list-item-line">
+                                <div class="weimob-list-item-title">{$c.title}</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+        
+    </vt:foreach>
+            </div>
+        </div>
+
+
+
+            <!--_share_js-->
+        <vt:template id="share_js" file="../../csmall/_share_js.html" charset="utf-8" />
+<!--/_share_js-->
+<!--_bottommenu-->
+    <vt:template id="bottommenu" file="../../bmenu/_bottommenu{$.bottomtype}.html" charset="utf-8" />
+<!--/_bottommenu-->	
+    <div id="insert2"></div>
+   <div style="text-align:center;color: #000;text-align: center;height: 48px;line-height: 48px;font-size: 12px;">{$config.wcopyright}</div>
+    </div>
+
+
+ 
+
+</body>
+</html>

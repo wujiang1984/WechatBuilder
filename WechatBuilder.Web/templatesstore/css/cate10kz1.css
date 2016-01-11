@@ -1,0 +1,29 @@
+#cate10 .catemenu li:nth-child(n+4) img {
+display: block;
+}
+#cate10 .catemenu li:nth-child(n+4) a {
+padding: 20px 5px 10px;
+}
+ #cate10 .catemenu li a {
+background-image: -webkit-gradient(linear, right bottom, left top, from(#282828), to(#272727), color-stop(47%, #676767));
+background-image: -webkit-linear-gradient(bottom right, #282828, #272727 47%, #676767);
+background-image: linear-gradient(to top left, #282828, #272727 47%, #676767);/*黑色渐变的3个颜色，可以自由更换*/
+margin:0;
+border-radius: 0;
+}
+ #cate10 .catemenu li:nth-child(2n) a {
+background-image: -webkit-gradient(linear, right bottom, left top, from(#2f5d97), to(#557dab), color-stop(47%, #9bb4d4));
+background-image: -webkit-linear-gradient(bottom right, #2f5d97, #557dab 47%, #9bb4d4);
+background-image: linear-gradient(to top left, #2f5d97, #557dab 47%, #9bb4d4);/*蓝色渐变的3个颜色，可以自由更换*/
+color:#fff;/*文字的颜色，可以自由更换*/
+}
+#cate10 .catemenu {
+margin:0;
+border-radius: 0;
+} 
+#cate10 .catemenu a {
+border:0; color:#ccc;/*文字的颜色，可以自由更换*/
+} 
+#cate10 {
+background-color:#000000;/*黑色背景，可以自由更换*/
+} 
